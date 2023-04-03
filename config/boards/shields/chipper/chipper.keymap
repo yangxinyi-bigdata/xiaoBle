@@ -130,8 +130,8 @@
                 lower_layer {
 
                         bindings = <
-   &trans &trans &kp LS(LC(TAB)) &kp UP &kp LC(TAB) &trans                            &trans &trans &trans &trans &trans &trans 
-   &trans &trans &kp LEFT &kp DOWN &kp RIGHT &trans                            &trans &trans &trans &trans &trans &trans
+   &trans &trans &kp LS(LC(TAB)) &kp UP &kp LC(TAB) &kp LG(TAB)                             &trans &trans &trans &trans &trans &trans 
+   &trans &trans &kp LEFT &kp DOWN &kp RIGHT &trans                            &kp HASH &trans &trans &trans &trans &trans
    &trans &trans &trans &trans &trans &trans                            &trans &trans &trans &trans &trans &trans
                         &trans &trans &trans                            &trans &trans &trans
                         >;
