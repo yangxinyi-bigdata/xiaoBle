@@ -73,7 +73,6 @@
 &kscan0 {
 	debounce-period = <20>;
 	};
-
 / {
 	behaviors {
 
@@ -120,8 +119,8 @@
 //                   | GUI | LWR | ENT |   | SPC | RSE  | ALT |
                         bindings = <
    &mt LC(LS(LALT)) ESC &kp Q &kp W &kp E &kp R &kp T                                               &kp Y &kp U  &kp I     &kp O   &kp P &kp DEL
-   &kp TAB &mt LG(A) A &kp S &kp D &mt LG(F) F &kp G                                                &kp H &kp J  &kp K &kp L   &kp ENTER &kp DEL
-   &sk LS(LC(LA(LGUI))) &mt LSHIFT Z &mt LG(X) X &mt LG(C) C &mt LG(V) V &mt LS(LC(LA(V))) B        &kp N &kp M  &kp COMMA &kp DOT &mt RSHFT FSLH &kp DEL
+   &kp TAB &hm LG(A) A &kp S &kp D &hm LG(F) F &kp G                                                &kp H &kp J  &kp K &kp L   &kp ENTER &kp DEL
+   &sk LS(LC(LA(LGUI))) &mt LSHIFT Z &hm LG(X) X &hm LG(C) C &hm LG(V) V &hm LS(LC(LA(V))) B        &kp N &kp M  &kp COMMA &kp DOT &mt RSHFT FSLH &kp DEL
                                             &kp LSHIFT &sk LGUI &lt LOWER SPACE                     &lt RAISE SPACE &kp BACKSPACE &mt LS(LC(LA(LGUI))) LS(LC(LA(LG(H))))
                         >;
 		label = "BASE";
