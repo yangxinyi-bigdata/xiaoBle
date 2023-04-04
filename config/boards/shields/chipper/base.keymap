@@ -11,7 +11,7 @@
 #include "../../../zmk-nodefree-config/international_chars/greek.dtsi"
 #include "../../../zmk-nodefree-config/international_chars/german.dtsi"
 
-#define DEF 0
+#define BASE 0
 #define NAV 1
 #define FN 2
 #define NUM 3
