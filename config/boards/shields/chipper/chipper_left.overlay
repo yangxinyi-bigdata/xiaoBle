@@ -1,3 +1,9 @@
+/*
+ * Copyright (c) 2020 Pete Johanson
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
 #include "chipper.dtsi"
 
 &kscan0 {
@@ -10,3 +16,4 @@
 		, <&gpio1 11 GPIO_ACTIVE_HIGH>   //Col5
 		;
 };
+
