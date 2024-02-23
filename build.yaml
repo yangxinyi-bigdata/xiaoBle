@@ -14,10 +14,6 @@
 ---
 include:
   - board: seeeduino_xiao_ble
-    shield: chippy_left
+    shield: chipper_left
   - board: seeeduino_xiao_ble
-    shield: chippy_right
-  # - board: seeeduino_xiao_ble
-  #   shield: chipper_left
-  # - board: seeeduino_xiao_ble
-  #   shield: chipper_right
+    shield: chipper_right
