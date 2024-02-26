@@ -29,7 +29,7 @@
             #binding-cells = <0>;
             bindings
                 = <&macro_tap_time 10>
-		,<&macro_tap &kp n &kp a &kp y &kp e &kp o &kp n>
+		,<&macro_tap &kp N &kp A &kp Y &kp E &kp O &kp N>
         ;
         };
     };
