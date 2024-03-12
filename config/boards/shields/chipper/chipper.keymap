@@ -56,7 +56,7 @@
 
 / {
     behaviors {
-        goup: grave_escape {
+        go_up: grave_up {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp I>, <&kp UP_ARROW>;
@@ -67,7 +67,7 @@
 
 / {
     behaviors {
-        godown: grave_escape {
+        go_down: grave_down {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp K>, <&kp DOWN_ARROW>;
@@ -78,7 +78,7 @@
 
 / {
     behaviors {
-        goright: grave_escape {
+        go_right: grave_right {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp L>, <&kp RIGHT_ARROW>;
@@ -89,7 +89,7 @@
 
 / {
     behaviors {
-        goleft: grave_escape {
+        go_left: grave_left {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp J>, <&kp LEFT_ARROW>;
@@ -152,9 +152,9 @@
 
                         bindings = <
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-    X_LT       ___            ___           ___          ___             ___            ___            ___           &goup          ___      &lt FN P        X_RT
+    X_LT       ___            ___           ___          ___             ___            ___            ___           &go_up          ___      &lt FN P        X_RT
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LM      ___            ___           ___          ___             ___            ___            &goleft      &godown    &goright       ___           X_RM
+    X_LM      ___            ___           ___          ___             ___            ___            &go_left      &go_down    &go_right       ___           X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LB      ___            ___           ___          ___             ___            ___            ___         ___              ___           ___          X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
