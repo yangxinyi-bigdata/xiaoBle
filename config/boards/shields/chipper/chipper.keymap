@@ -59,8 +59,8 @@
         go_up: grave_escape {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp I>, <&kp UP>; // 默认输入I, 当按下下面的修饰键时, 输入UP
-            mods = <(MOD_LGUI)>;  // 修饰键
+            bindings = <&kp I>, <&kp UP_ARROW>;
+            mods = <(MOD_LGUI)>;
         };
     };
 };
@@ -70,19 +70,8 @@
         go_down: grave_escape {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp K>, <&kp DOWN>; // 默认输入I, 当按下下面的修饰键时, 输入UP
-            mods = <(MOD_LGUI)>;  // 修饰键
-        };
-    };
-};
-
-/ {
-    behaviors {
-        go_left: grave_escape {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp J>, <&kp LEFT>; // 默认输入I, 当按下下面的修饰键时, 输入UP
-            mods = <(MOD_LGUI)>;  // 修饰键
+            bindings = <&kp K>, <&kp DOWN_ARROW>;
+            mods = <(MOD_LGUI)>;
         };
     };
 };
@@ -92,11 +81,24 @@
         go_right: grave_escape {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp L>, <&kp RIGHT>; // 默认输入I, 当按下下面的修饰键时, 输入UP
-            mods = <(MOD_LGUI)>;  // 修饰键
+            bindings = <&kp L>, <&kp RIGHT_ARROW>;
+            mods = <(MOD_LGUI)>;
         };
     };
 };
+
+/ {
+    behaviors {
+        go_left: grave_escape {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp J>, <&kp LEFT_ARROW>;
+            mods = <(MOD_LGUI)>;
+        };
+    };
+};
+
+
 
 / {
         keymap {
