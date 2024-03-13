@@ -9,7 +9,7 @@
 #define X_LB  &kp Z
 #define X_RT  &kp LEFT_BRACKET
 #define X_RM  &kp RETURN
-#define X_RB  &slash_option
+#define X_RB  &kp SLASH
 
 #define XXX &none
 #define ___ &trans
@@ -100,10 +100,10 @@
 
 / {
     behaviors {
-        comma_ctrl: grave_comma_ctrl {
+        go_ctrl: grave_go_ctrl {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp COMMA>, <&kp LCTRL>;
+            bindings = <&kp N>, <&kp LCTRL>;
             mods = <(MOD_LGUI)>;
         };
     };
@@ -111,10 +111,10 @@
 
 / {
     behaviors {
-        dot_option: grave_dot_option {
+        go_option: grave_go_option {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp DOT>, <&kp LALT>;
+            bindings = <&kp H>, <&kp LALT>;
             mods = <(MOD_LGUI)>;
         };
     };
@@ -122,10 +122,10 @@
 
 / {
     behaviors {
-        slash_option: grave_slash_caps {
+        go_caps: grave_go_caps {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp SLASH>, <&kp CAPS>;
+            bindings = <&kp Y>, <&kp CAPS>;
             mods = <(MOD_LGUI)>;
         };
     };
@@ -166,11 +166,11 @@
                 DEF_layer {
                         bindings = <
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮           ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-    X_LT     &lt NAV Q      &lt FN W       &kp E          &kp R         &kp T                    &kp Y         &kp U         &go_up        &kp O       &lt FN P      X_RT
+    X_LT     &lt NAV Q      &lt FN W       &kp E          &kp R         &kp T                   &go_caps         &kp U         &go_up        &kp O       &lt FN P      X_RT
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤           ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LM     &kp A          &kp S         &kp D           &kp F        &kp G                    &kp H          &go_left      &go_down    &go_right      &kp BACKSPACE   X_RM
+    X_LM     &kp A          &kp S         &kp D           &kp F        &kp G                    &go_option         &go_left      &go_down    &go_right      &kp BACKSPACE   X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤           ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LB      &kp Z         &kp X        &kp C          &kp V        &kp B                       &kp N         &kp M        &comma_ctrl    &dot_option   &slash_option  X_RB
+    X_LB      &kp Z         &kp X        &kp C          &kp V        &kp B                       &go_ctrl         &kp M        &kp COMMA      &kp DOT      &kp SLASH      X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤           ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
                                          &kp LEFT_COMMAND  &kp SPC   &kp SPC                   &kp ENTER     &lt NAV SEMI    &kp SINGLE_QUOTE
 //                                     ╰────────────┼──────────────┴─────────────╯           ╰─────────────┴─────────────┼─────────────╯
