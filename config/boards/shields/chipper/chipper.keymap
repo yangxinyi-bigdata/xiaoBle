@@ -67,7 +67,7 @@
 
 / {
     behaviors {
-        go_up: grave_up {
+        go_up: go_up {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp I>, <&kp UP_ARROW>;
@@ -79,7 +79,7 @@
 
 / {
     behaviors {
-        go_down: grave_down {
+        go_down: go_down {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp K>, <&kp DOWN_ARROW>;
@@ -90,7 +90,7 @@
 
 / {
     behaviors {
-        go_right: grave_right {
+        go_right: go_right {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp L>, <&kp RIGHT_ARROW>;
@@ -101,7 +101,7 @@
 
 / {
     behaviors {
-        go_left: grave_left {
+        go_left: go_left {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp J>, <&kp LEFT_ARROW>;
@@ -126,7 +126,7 @@
         go_ctrl: go_ctrl {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp H>, <&kp >LEFT_CTRL;
+            bindings = <&kp H>, <&kp LEFT_CTRL>;
             mods = <(MOD_LGUI)>;
         };
     };
@@ -134,7 +134,7 @@
 
 / {
     behaviors {
-        go_caps: grave_go_caps {
+        go_caps: go_caps {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp Y>, <&kp CAPS>;
@@ -145,7 +145,7 @@
 
 / {
     behaviors {
-        bspc_del: backspace_delete {
+        bspc_del: bspc_del {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp BACKSPACE>, <&kp DELETE>;
