@@ -112,10 +112,10 @@
 
 / {
     behaviors {
-        go_ctrl: grave_go_ctrl {
+        go_option: go_option {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp N>, <&kp Q>;
+            bindings = <&lt NAV SEMI>, <&kp LEFT_ALT>;
             mods = <(MOD_LGUI)>;
         };
     };
@@ -123,10 +123,10 @@
 
 / {
     behaviors {
-        go_option: grave_go_option {
+        go_ctrl: go_ctrl {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp H>, <&kp LALT>;
+            bindings = <&kp H>, <&kp >LEFT_CTRL;
             mods = <(MOD_LGUI)>;
         };
     };
@@ -145,7 +145,7 @@
 
 / {
     behaviors {
-        backspace_delete: backspace_delete {
+        bspc_del: backspace_delete {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp BACKSPACE>, <&kp DELETE>;
@@ -189,13 +189,13 @@
                 DEF_layer {
                         bindings = <
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮           ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-    X_LT     &lt NAV Q      &lt FN W       &kp E          &kp R         &kp T                  &kp Y        &kp U         &kp I        &kp O       &lt FN P      X_RT
+    X_LT     &lt NAV Q      &lt FN W       &kp E          &kp R         &kp T                    &kp Y        &kp U          &grave_up      &kp O       &lt FN P      X_RT
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤           ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LM     &kp A          &kp S         &kp D           &kp F        &kp G                    &kp H         &kp J         &kp K        &kp L      &kp BACKSPACE   X_RM
+    X_LM     &kp A          &kp S         &kp D           &kp F        &kp G                     &go_ctrl    &grave_left    &grave_down  &grave_right  &bspc_del       X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤           ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LB      &kp Z         &kp X        &kp C          &kp V          &kp B                     &kp N         &kp M        &kp COMMA      &kp DOT      &kp SLASH      X_RB
+    X_LB      &kp Z         &kp X        &kp C          &kp V          &kp B                     &kp N         &kp M      &kp COMMA      &kp DOT      &kp SLASH      X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤           ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
-                                         &kp LEFT_COMMAND  &kp SPC    &kp BACKSPACE             &kp ENTER     &lt NAV SEMI    &kp SINGLE_QUOTE
+                                         &kp LEFT_COMMAND  &kp SPC    &kp BACKSPACE             &kp ENTER     &go_option    &kp SINGLE_QUOTE
 //                                     ╰────────────┼──────────────┴─────────────╯           ╰─────────────┴─────────────┼─────────────╯
                         >;
                 };
