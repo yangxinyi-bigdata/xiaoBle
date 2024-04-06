@@ -126,7 +126,7 @@
         go_ctrl: go_ctrl {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp H>, <&kp LEFT_CTRL>;
+            bindings = <&kp H>, <&kp LCTRL>;
             mods = <(MOD_LGUI)>;
         };
     };
