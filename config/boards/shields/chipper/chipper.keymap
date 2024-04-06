@@ -55,6 +55,17 @@
 };
 
 / {
+    combos {
+        compatible = "zmk,combos";
+        combo_esc {
+            timeout-ms = <50>;
+            key-positions = <0 1>;
+            bindings = <&kp UP_ARROW>;
+        };
+    };
+};
+
+/ {
     behaviors {
         go_up: grave_up {
             compatible = "zmk,behavior-mod-morph";
@@ -64,6 +75,7 @@
         };
     };
 };
+
 
 / {
     behaviors {
@@ -132,6 +144,17 @@
 };
 
 / {
+    behaviors {
+        backspace_delete: backspace_delete {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp BACKSPACE>, <&kp DELETE>;
+            mods = <(MOD_LSFT)>;
+        };
+    };
+};
+
+/ {
     macros {
         go_iPhone: go_iPhone {
             compatible = "zmk,behavior-macro";
@@ -166,13 +189,13 @@
                 DEF_layer {
                         bindings = <
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮           ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-    X_LT     &lt NAV Q      &lt FN W       &kp E          &kp R         &kp T                   &go_caps         &kp U         &go_up        &kp O       &lt FN P      X_RT
+    X_LT     &lt NAV Q      &lt FN W       &kp E          &kp R         &kp T                  &kp Y        &kp U         &kp I        &kp O       &lt FN P      X_RT
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤           ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LM     &kp A          &kp S         &kp D           &kp F        &kp G                    &go_option         &go_left      &go_down    &go_right    &kp BACKSPACE   X_RM
+    X_LM     &kp A          &kp S         &kp D           &kp F        &kp G                    &kp H         &kp J         &kp K        &kp L      &kp BACKSPACE   X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤           ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LB      &kp Z         &kp X        &kp C          &kp V        &kp B                       &go_ctrl         &kp M        &kp COMMA      &kp DOT      &kp SLASH      X_RB
+    X_LB      &kp Z         &kp X        &kp C          &kp V          &kp B                     &kp N         &kp M        &kp COMMA      &kp DOT      &kp SLASH      X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤           ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
-                                         &kp LEFT_COMMAND  &kp SPC    &kp BACKSPACE                   &kp ENTER     &lt NAV SEMI    &kp SINGLE_QUOTE
+                                         &kp LEFT_COMMAND  &kp SPC    &kp BACKSPACE             &kp ENTER     &lt NAV SEMI    &kp SINGLE_QUOTE
 //                                     ╰────────────┼──────────────┴─────────────╯           ╰─────────────┴─────────────┼─────────────╯
                         >;
                 };
