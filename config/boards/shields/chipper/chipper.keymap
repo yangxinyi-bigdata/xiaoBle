@@ -115,7 +115,7 @@
         go_ctrl: grave_go_ctrl {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp N>, <&kp LCTRL>;
+            bindings = <&kp N>, <&kp Q>;
             mods = <(MOD_LGUI)>;
         };
     };
