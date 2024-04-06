@@ -169,7 +169,7 @@
 
 / {
     macros {
-        leave_iPhone: leave_iPhone {
+        go_mac: go_mac {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -180,6 +180,31 @@
     };
 };
 
+/ {
+    macros {
+         go_vision: go_vision {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&bt BT_SEL 2>
+                , <&tog IOS>
+                ;
+        };
+    };
+};
+
+/ {
+    macros {
+         go_ipad: go_ipad {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&bt BT_SEL 3>
+                , <&tog IOS>
+                ;
+        };
+    };
+};
 
 
 / {
@@ -251,9 +276,9 @@
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
   &bt BT_NXT  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3   &bt BT_CLR              ___           ___       ___           ___           ___       X_RT
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-  &bt BT_PRV  &bt BT_DISC 0   &bt BT_DISC 1   ___       &kp T       &bootloader     &bootloader   &kp T          ___           ___           ___             X_RM
+  &bt BT_PRV &bt BT_DISC 0  &bt BT_DISC 1 &bt BT_DISC 2 &bt BT_DISC 3     &bootloader     &bootloader   &kp T          ___           ___           ___             X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LB      &leave_iPhone    &go_iPhone      ___         ___        &sys_reset       &sys_reset    ___           ___           ___           ___           X_RB
+    X_LB      &go_mac      &go_iPhone     &go_vision    &go_ipad      &sys_reset       &sys_reset    ___           ___           ___           ___           X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
                                            &tog IOS      &tog NAV       ___            ___           ___             ___
 //                                      ╰─────────────┴────────────┴─────────────╯ ╰─────────────┴──────────────┴─────────────╯
