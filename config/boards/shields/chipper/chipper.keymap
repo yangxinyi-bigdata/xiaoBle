@@ -268,15 +268,28 @@
 
 // 下面是Notion快捷键
 / {
+    macros {
+        notion_h1_go: notion_h1_go {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_tap &kp LGUI &kp LALT &kp NUMBER_1>;
+        };
+    };
+};
+
+/ {
     behaviors {
         notion_h1: notion_h1 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp A>, <&kp NUMBER_1>;
+            bindings = <&kp A>, <&kp LG(LA(NUMBER_1))>;
             mods = <(MOD_LALT)>;
         };
     };
 };
+
+
 
 / {
     behaviors {
