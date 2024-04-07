@@ -267,16 +267,6 @@
 };
 
 // 下面是Notion快捷键
-/ {
-    macros {
-        notion_h1_go: notion_h1_go {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_tap &kp LGUI &kp LALT &kp NUMBER_1>;
-        };
-    };
-};
 
 / {
     behaviors {
@@ -296,7 +286,7 @@
         notion_h2: notion_h2 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp S>, <&kp NUMBER_2>;
+            bindings = <&kp S>, <&kp LG(LA(NUMBER_2))>;
             mods = <(MOD_LALT)>;
         };
     };
@@ -307,7 +297,7 @@
         notion_h3: notion_h3 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp D>, <&kp NUMBER_3>;
+            bindings = <&kp D>, <&kp LG(LA(NUMBER_3))>;
             mods = <(MOD_LALT)>;
         };
     };
@@ -318,7 +308,7 @@
         notion_h0: notion_h0 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp D>, <&kp NUMBER_0>;
+            bindings = <&kp D>, <&kp LG(LA(NUMBER_0))>;
             mods = <(MOD_LALT)>;
         };
     };
