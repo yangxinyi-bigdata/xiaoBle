@@ -59,7 +59,7 @@
         compatible = "zmk,combos";
         combo_esc {
             timeout-ms = <50>;
-            key-positions = <5 6>;
+            key-positions = <19 20>;
             bindings = <&kp LEFT_ARROW>;
         };
     };
@@ -70,8 +70,8 @@
         compatible = "zmk,combos";
         combo_esc {
             timeout-ms = <50>;
-            key-positions = <0>;
-            bindings = <&kp Q>;
+            key-positions = <20 21>;
+            bindings = <&kp RIGHT_ARROW>;
         };
     };
 };
@@ -81,8 +81,8 @@
         compatible = "zmk,combos";
         combo_esc {
             timeout-ms = <50>;
-            key-positions = <15>;
-            bindings = <&kp H>;
+            key-positions = <8 20>;
+            bindings = <&kp UP_ARROW>;
         };
     };
 };
@@ -92,11 +92,23 @@
         compatible = "zmk,combos";
         combo_esc {
             timeout-ms = <50>;
-            key-positions = <16>;
-            bindings = <&kp J>;
+            key-positions = <20 32>;
+            bindings = <&kp UP_ARROW>;
         };
     };
 };
+
+/ {
+    combos {
+        compatible = "zmk,combos";
+        combo_esc {
+            timeout-ms = <50>;
+            key-positions = <20 32>;
+            bindings = <&kp DOWN_ARROW>;
+        };
+    };
+};
+
 
 / {
     behaviors {
