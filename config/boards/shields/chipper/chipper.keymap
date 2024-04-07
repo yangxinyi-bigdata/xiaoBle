@@ -99,6 +99,61 @@
     };
 };
 
+// 下面是Notion快捷键
+/ {
+    behaviors {
+        notion_h1: notion_h1 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp A>, <&kp LGUI &kp LALT &kp NUMBER_1>;
+            mods = <(MOD_LALT)>;
+        };
+    };
+};
+
+/ {
+    behaviors {
+        notion_h2: notion_h2 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp S>, <&kp LGUI &kp LALT &kp NUMBER_2>;
+            mods = <(MOD_LALT)>;
+        };
+    };
+};
+
+/ {
+    behaviors {
+        notion_h3: notion_h3 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp D>, <&kp LGUI &kp LALT &kp NUMBER_3>;
+            mods = <(MOD_LALT)>;
+        };
+    };
+};
+
+/ {
+    behaviors {
+        notion_h0: notion_h0 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp D>, <&kp LGUI &kp LALT &kp NUMBER_0>;
+            mods = <(MOD_LALT)>;
+        };
+    };
+};
+
+/ {
+    behaviors {
+        go_up: go_up {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp I>, <&kp UP_ARROW>;
+            mods = <(MOD_LGUI)>;
+        };
+    };
+};
 
 / {
     behaviors {
