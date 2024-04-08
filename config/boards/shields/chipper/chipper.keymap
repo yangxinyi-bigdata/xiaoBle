@@ -59,7 +59,7 @@
     combos {
         compatible = "zmk,combos";
         combo_left {
-            timeout-ms = <50>;
+            timeout-ms = <100>;
             key-positions = <19 20>;
             bindings = <&kp LEFT_ARROW>;
         };
@@ -70,7 +70,7 @@
     combos {
         compatible = "zmk,combos";
         combo_right {
-            timeout-ms = <50>;
+            timeout-ms = <100>;
             key-positions = <20 21>;
             bindings = <&kp RIGHT_ARROW>;
         };
@@ -81,7 +81,7 @@
     combos {
         compatible = "zmk,combos";
         combo_up {
-            timeout-ms = <50>;
+            timeout-ms = <100>;
             key-positions = <8 20>;
             bindings = <&kp UP_ARROW>;
         };
@@ -92,7 +92,7 @@
     combos {
         compatible = "zmk,combos";
         combo_down {
-            timeout-ms = <50>;
+            timeout-ms = <100>;
             key-positions = <20 32>;
             bindings = <&kp DOWN_ARROW>;
         };
@@ -156,6 +156,51 @@
         };
     };
 };
+
+/ {
+    behaviors {
+        command_7: command_7 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp NUMBER_7>, <&kp LG(LEFT_ARROW)>;
+            mods = <(MOD_LGUI)>;
+        };
+    };
+};
+
+/ {
+    behaviors {
+        command_xing: command_xing {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp ASTERISK>, <&kp LG(UP_ARROW)>;
+            mods = <(MOD_LGUI)>;
+        };
+    };
+};
+
+/ {
+    behaviors {
+        command_8: command_8 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp NUMBER_8>, <&kp LG(DOWN_ARROW)>;
+            mods = <(MOD_LGUI)>;
+        };
+    };
+};
+
+/ {
+    behaviors {
+        command_9: command_9 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp NUMBER_9>, <&kp LG(RIGHT_ARROW)>;
+            mods = <(MOD_LGUI)>;
+        };
+    };
+};
+
 
 / {
     behaviors {
