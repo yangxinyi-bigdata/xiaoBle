@@ -308,7 +308,7 @@
         notion_h0: notion_h0 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp D>, <&kp LG(LA(NUMBER_0))>;
+            bindings = <&kp F>, <&kp LG(LA(NUMBER_0))>;
             mods = <(MOD_LALT)>;
         };
     };
@@ -328,7 +328,7 @@
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤           ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LB      &kp Z         &kp X        &kp C          &kp V          &kp B                     &kp N         &kp M      &kp COMMA      &kp DOT      &kp SLASH      X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤           ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
-                                      &kp LEFT_COMMAND  &kp SPC    &mt LEFT_ALT ESC      &mt LCTRL BACKSPACE   &lt NAV SEMI   &kp SINGLE_QUOTE
+                                        &mt LEFT_ALT ESC  &kp LEFT_COMMAND  &kp SPC         &mt LCTRL RETURN   &lt NAV SEMI   &kp SINGLE_QUOTE
 //                                     ╰────────────┼──────────────┴─────────────╯           ╰─────────────┴─────────────┼─────────────╯
                         >;
                 };
