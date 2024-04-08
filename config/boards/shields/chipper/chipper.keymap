@@ -382,9 +382,9 @@
 
                         bindings = <
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-    X_LT     &kp EXCLAMATION &lt FN AT_SIGN  &kp HASH     &kp DOLLAR    &kp PERCENT     &kp CARET    &kp AMPERSAND  &kp ASTERISK   &kp LPAR   &lt FN RPAR     X_RT
+    X_LT     &kp EXCLAMATION &lt FN AT_SIGN  &kp HASH     &kp DOLLAR    &kp PERCENT   &kp CARET    &kp AMPERSAND  &command_xing   &kp LPAR   &lt FN RPAR     X_RT
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LM     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &kp NUMBER_6   &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9     ___         X_RM
+    X_LM     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &kp NUMBER_6   &command_7   &command_8     &command_9     ___          X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LB     &kp GRAVE     &kp TILDE     &kp NUMBER_0   &kp PLUS    &kp UNDERSCORE    &kp MINUS      &kp EQUAL      ___           ___           ___          X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
