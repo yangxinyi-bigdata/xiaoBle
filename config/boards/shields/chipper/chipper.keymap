@@ -362,7 +362,7 @@
 
 / {
     behaviors {
-        &td0: tognav {
+        td0: tognav {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
