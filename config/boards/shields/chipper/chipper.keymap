@@ -9,7 +9,7 @@
 #define X_LB  &none
 #define X_RT  &kp LEFT_BRACKET
 #define X_RM  &kp RETURN
-#define X_RB  &tonav
+#define X_RB  &dancetonav
 
 #define XXX &none
 #define ___ &trans
@@ -319,6 +319,17 @@
             #binding-cells = <0>;
             bindings = <&none>, <&tog NAV>;
             mods = <(MOD_LALT)>;
+        };
+    };
+};
+
+/ {
+    behaviors {
+        dancetonav: dancetonav {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&none>, <&tog NAV>;
         };
     };
 };
