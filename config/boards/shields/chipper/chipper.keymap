@@ -362,7 +362,7 @@
 
 / {
     behaviors {
-        td0: tognav {
+        td0: tap_dance_mod_tap {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
@@ -374,9 +374,7 @@
         compatible = "zmk,keymap";
 
         default_layer {
-            bindings = <
-                &td0
-            >;
+            bindings = <&td0>;
         };
     };
 };
@@ -393,7 +391,7 @@
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤           ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LM     &notion_h1     &notion_h2   &notion_h3    &notion_h0        &kp G                     &go_ctrl      &go_left      &go_down     &go_right   &bspc_del       X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤           ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LB      &kp Z         &kp X        &kp C          &kp V          &kp B                     &kp N         &kp M      &kp COMMA      &kp DOT      &kp SLASH      &td0
+    X_LB      &kp Z         &kp X        &kp C          &kp V          &kp B                     &kp N         &kp M      &kp COMMA      &kp DOT      &kp SLASH      X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤           ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
                                         &mt LEFT_ALT ESC  &kp LEFT_COMMAND  &kp SPC         &mt LCTRL RETURN   &lt NAV SEMI   &kp SINGLE_QUOTE
 //                                     ╰────────────┼──────────────┴─────────────╯           ╰─────────────┴─────────────┼─────────────╯
@@ -408,7 +406,7 @@
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     X_LM     &kp CARET  &kp AMPERSAND    &kp LPAR       &kp RPAR     &kp BACKSLASH    &kp MINUS    &kp NUMBER_4  &kp NUMBER_5   &kp NUMBER_6     ___         X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-   &kp GRAVE  &kp TILDE   &kp COMMA     &kp LBKT      &kp RBKT     &kp UNDERSCORE    &kp EQUAL    &kp NUMBER_1  &kp NUMBER_2   &kp NUMBER_3     &kp DOT     &td0
+   &kp GRAVE  &kp TILDE   &kp COMMA     &kp LBKT      &kp RBKT     &kp UNDERSCORE    &kp EQUAL    &kp NUMBER_1  &kp NUMBER_2   &kp NUMBER_3     &kp DOT     X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
                                          ___             ___           ___             ___           ___         &kp NUMBER_0
 //                                     ╰────────────┼──────────────┴─────────────╯   ╰─────────────┴─────────────┼─────────────╯
