@@ -112,21 +112,10 @@
 
 / {
     behaviors {
-        command_7: command_7 {
+        command_4: command_4 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp NUMBER_7>, <&kp LG(LEFT_ARROW)>;
-            mods = <(MOD_LGUI)>;
-        };
-    };
-};
-
-/ {
-    behaviors {
-        command_xing: command_xing {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp ASTERISK>, <&kp LG(UP_ARROW)>;
+            bindings = <&kp NUMBER_4>, <&kp LG(LEFT_ARROW)>;
             mods = <(MOD_LGUI)>;
         };
     };
@@ -137,7 +126,7 @@
         command_8: command_8 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp NUMBER_8>, <&kp LG(DOWN_ARROW)>;
+            bindings = <&kp NUMBER_8>, <&kp LG(UP_ARROW)>;
             mods = <(MOD_LGUI)>;
         };
     };
@@ -145,10 +134,21 @@
 
 / {
     behaviors {
-        command_9: command_9 {
+        command_5: command_5 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp NUMBER_9>, <&kp LG(RIGHT_ARROW)>;
+            bindings = <&kp NUMBER_5>, <&kp LG(DOWN_ARROW)>;
+            mods = <(MOD_LGUI)>;
+        };
+    };
+};
+
+/ {
+    behaviors {
+        command_6: command_6 {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp NUMBER_6>, <&kp LG(RIGHT_ARROW)>;
             mods = <(MOD_LGUI)>;
         };
     };
@@ -346,9 +346,9 @@
 
                         bindings = <
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-    X_LT     &kp EXCLAMATION &kp AT_SIGN  &kp HASH     &kp DOLLAR    &kp PERCENT      &kp PLUS     &kp NUMBER_7  &kp NUMBER_8   &kp NUMBER_9  &kp ASTERISK   &kp SLASH
+    X_LT     &kp EXCLAMATION &kp AT_SIGN  &kp HASH     &kp DOLLAR    &kp PERCENT      &kp PLUS     &kp NUMBER_7  &command_8   &kp NUMBER_9  &lt FN ASTERISK  &kp SLASH
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    X_LM     &kp CARET  &kp AMPERSAND    &kp LPAR       &kp RPAR     &kp BACKSLASH    &kp MINUS    &kp NUMBER_4  &kp NUMBER_5   &kp NUMBER_6     ___         X_RM
+    X_LM     &kp CARET  &kp AMPERSAND    &kp LPAR       &kp RPAR     &kp BACKSLASH    &kp MINUS    &command_4   &command_5     &command_6     ___         X_RM
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
    &kp GRAVE  &kp TILDE   &kp COMMA     &kp LBKT      &kp RBKT     &kp UNDERSCORE    &kp EQUAL    &kp NUMBER_1  &kp NUMBER_2   &kp NUMBER_3     &kp DOT     X_RB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
