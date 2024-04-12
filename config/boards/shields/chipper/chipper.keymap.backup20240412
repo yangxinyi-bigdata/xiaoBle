@@ -380,52 +380,6 @@
 
 
 / {
-    behaviors {
-        dance_LBRC: dance_LBRC {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp LBRC>, <&kp RBRC>;
-        };
-    };
-};
-
-/ {
-    behaviors {
-        dance_LPAR: dance_LPAR {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp LPAR>, <&kp RPAR>;
-        };
-    };
-};
-
-/ {
-    behaviors {
-        dance_LBKT: dance_LBKT {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp LBKT>, <&kp RBKT>;
-        };
-    };
-};
-
-/ {
-    behaviors {
-        dance_COLON: dance_COLON {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp COLON>, <&kp SEMICOLON>;
-        };
-    };
-};
-
-
-
-/ {
         keymap {
                 compatible = "zmk,keymap";
 
@@ -438,7 +392,7 @@
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤           ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
   &dance_tilde  &kp Z        &kp X        &kp C          &kp V          &kp B                     &kp N         &kp M      &kp COMMA      &kp DOT      &kp SLASH      &dancetonav
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤           ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
-                                        &mt LEFT_ALT ESC  &kp LEFT_COMMAND  &kp SPC         &mt LCTRL RETURN   &lt NAV NUMBER_2  &kp NUMBER_3
+                                        &mt LEFT_ALT ESC  &kp LEFT_COMMAND  &kp SPC         &mt LCTRL RETURN   &lt NAV SEMI   &kp SINGLE_QUOTE
 //                                     ╰────────────┼──────────────┴─────────────╯           ╰─────────────┴─────────────┼─────────────╯
                         >;
                 };
@@ -447,11 +401,11 @@
 
                         bindings = <
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-    ___      &kp EXCLAMATION &kp AT_SIGN  &kp BACKSLASH  &dance_LBRC  &dance_COLON     &kp PLUS     &kp NUMBER_7  &command_8   &kp NUMBER_9  &lt FN ASTERISK  &kp SLASH
+    ___      &kp EXCLAMATION &kp AT_SIGN  &kp BACKSLASH   &kp LBRC    &kp RBRC      &kp PLUS     &kp NUMBER_7  &command_8   &kp NUMBER_9  &lt FN ASTERISK  &kp SLASH
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    ___      &kp HASH     &kp DOLLAR   &kp UNDERSCORE  &dance_LPAR  &kp DOUBLE_QUOTES  &kp MINUS    &command_4   &command_5     &command_6        ___            ___
+    ___      &kp HASH       &kp DOLLAR   &kp UNDERSCORE  &kp LPAR     &kp RPAR      &kp MINUS    &command_4   &command_5     &command_6        ___            ___
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-   &kp GRAVE  &kp CARET    &kp AMPS       &kp PERCENT  &dance_LBKT &kp SINGLE_QUOTE    &kp EQUAL    &kp NUMBER_1  &kp NUMBER_2   &kp NUMBER_3   &kp DOT     &comma_nav
+   &kp GRAVE  &kp CARET    &kp AMPS       &kp PERCENT    &kp LBKT      &kp RBKT       &kp EQUAL    &kp NUMBER_1  &kp NUMBER_2   &kp NUMBER_3   &kp DOT     &comma_nav
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
                                          ___             ___           ___             ___           ___         &kp NUMBER_0
 //                                     ╰────────────┼──────────────┴─────────────╯   ╰─────────────┴─────────────┼─────────────╯
