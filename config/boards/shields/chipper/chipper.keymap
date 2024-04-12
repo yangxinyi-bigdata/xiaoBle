@@ -126,7 +126,7 @@
         go_page_down: go_page_down {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp Y>, <&kp PAGE_DOWN>;
+            bindings = <&kp H>, <&kp PAGE_DOWN>;
             mods = <(MOD_LGUI)>;
         };
     };
