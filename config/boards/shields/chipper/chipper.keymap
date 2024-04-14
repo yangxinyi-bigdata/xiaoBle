@@ -34,6 +34,8 @@
         };
     };
 };
+
+
 / {
     combos {
         compatible = "zmk,combos";
@@ -44,6 +46,106 @@
         };
     };
 };
+
+/ {
+    combos {
+        compatible = "zmk,combos";
+	 combo_BACKSLASH {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <40 3>;
+            bindings = <&kp BACKSLASH>;
+        };
+    };
+};
+
+/ {
+    combos {
+        compatible = "zmk,combos";
+	 combo_LBRC {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <40 4>;
+            bindings = <&kp LBRC>;
+        };
+    };
+};
+
+/ {
+    combos {
+        compatible = "zmk,combos";
+	 combo_COLON {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <40 5>;
+            bindings = <&kp COLON>;
+        };
+    };
+};
+
+/ {
+    combos {
+        compatible = "zmk,combos";
+	 combo_UNDERSCORE {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <40 15>;
+            bindings = <&kp UNDERSCORE>;
+        };
+    };
+};
+
+/ {
+    combos {
+        compatible = "zmk,combos";
+	 combo_LPAR {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <40 16>;
+            bindings = <&kp LPAR>;
+        };
+    };
+};
+
+/ {
+    combos {
+        compatible = "zmk,combos";
+	 combo_DOUBLE_QUOTES {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <40 17>;
+            bindings = <&kp DOUBLE_QUOTES>;
+        };
+    };
+};
+
+/ {
+    combos {
+        compatible = "zmk,combos";
+	 combo_PERCENT {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <40 27>;
+            bindings = <&kp PERCENT>;
+        };
+    };
+};
+
+/ {
+    combos {
+        compatible = "zmk,combos";
+	 combo_LBKT {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <40 28>;
+            bindings = <&kp LBKT>;
+        };
+    };
+};
+
+/ {
+    combos {
+        compatible = "zmk,combos";
+	 combo_SINGLE_QUOTE {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <40 29>;
+            bindings = <&kp SINGLE_QUOTE>;
+        };
+    };
+};
+
 / {
     conditional_layers {
         compatible = "zmk,conditional-layers";
