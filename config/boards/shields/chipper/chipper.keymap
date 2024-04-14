@@ -23,38 +23,6 @@
 #define SYS 4
 
 
-/ {
-    combos {
-        compatible = "zmk,combos";
-	 combo_PERCENT {
-            timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <27 40>;
-            bindings = <&kp PERCENT>;
-        };
-    };
-};
-
-/ {
-    combos {
-        compatible = "zmk,combos";
-	 combo_LBKT {
-            timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <28 40>;
-            bindings = <&kp LBKT>;
-        };
-    };
-};
-
-/ {
-    combos {
-        compatible = "zmk,combos";
-	 combo_SINGLE_QUOTE {
-            timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <29 40>;
-            bindings = <&kp SINGLE_QUOTE>;
-        };
-    };
-};
 
 / {
     combos {
@@ -63,6 +31,39 @@
             timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <6 40>;
             bindings = <&kp PLUS>;
+        };
+    };
+};
+
+/ {
+    combos {
+        compatible = "zmk,combos";
+	 combo_NUMBER_7 {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <7 40>;
+            bindings = <&kp NUMBER_7>;
+        };
+    };
+};
+
+/ {
+    combos {
+        compatible = "zmk,combos";
+	 combo_NUMBER_8 {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <8 40>;
+            bindings = <&command_8>;
+        };
+    };
+};
+
+/ {
+    combos {
+        compatible = "zmk,combos";
+	 combo_NUMBER_9 {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <9 40>;
+            bindings = <&kp NUMBER_9>;
         };
     };
 };
@@ -81,10 +82,109 @@
 / {
     combos {
         compatible = "zmk,combos";
+	 combo_NUMBER_4 {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <19 40>;
+            bindings = <&command_4>;
+        };
+    };
+};
+
+/ {
+    combos {
+        compatible = "zmk,combos";
+	 combo_NUMBER_5 {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <20 40>;
+            bindings = <&command_5>;
+        };
+    };
+};
+
+/ {
+    combos {
+        compatible = "zmk,combos";
+	 combo_NUMBER_6 {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <21 40>;
+            bindings = <&command_6>;
+        };
+    };
+};
+
+/ {
+    combos {
+        compatible = "zmk,combos";
 	 combo_EQUAL {
             timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <30 40>;
             bindings = <&kp EQUAL>;
+        };
+    };
+};
+
+/ {
+    combos {
+        compatible = "zmk,combos";
+	 combo_NUMBER_1 {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <31 40>;
+            bindings = <&kp NUMBER_1>;
+        };
+    };
+};
+
+/ {
+    combos {
+        compatible = "zmk,combos";
+	 combo_NUMBER_2 {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <32 40>;
+            bindings = <&kp NUMBER_2>;
+        };
+    };
+};
+
+/ {
+    combos {
+        compatible = "zmk,combos";
+	 combo_NUMBER_3 {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <33 40>;
+            bindings = <&kp NUMBER_3>;
+        };
+    };
+};
+
+/ {
+    combos {
+        compatible = "zmk,combos";
+	 combo_DOT {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <34 40>;
+            bindings = <&kp DOT>;
+        };
+    };
+};
+
+/ {
+    combos {
+        compatible = "zmk,combos";
+	 combo_EXCLAMATION {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <1 40>;
+            bindings = <&kp EXCLAMATION>;
+        };
+    };
+};
+
+/ {
+    combos {
+        compatible = "zmk,combos";
+	 combo_AT_SIGN {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <2 40>;
+            bindings = <&kp AT_SIGN>;
         };
     };
 };
@@ -125,6 +225,29 @@
 / {
     combos {
         compatible = "zmk,combos";
+	 combo_HASH {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <13 40>;
+            bindings = <&kp HASH>;
+        };
+    };
+};
+
+/ {
+    combos {
+        compatible = "zmk,combos";
+	 combo_DOLLAR {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <14 40>;
+            bindings = <&kp DOLLAR>;
+        };
+    };
+};
+
+
+/ {
+    combos {
+        compatible = "zmk,combos";
 	 combo_UNDERSCORE {
             timeout-ms = <COMBO_TIMEOUT>;
             key-positions = <15 40>;
@@ -138,7 +261,7 @@
         compatible = "zmk,combos";
 	 combo_LPAR {
             timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <40 16>;
+            key-positions = <16 40>;
             bindings = <&kp LPAR>;
         };
     };
@@ -149,13 +272,66 @@
         compatible = "zmk,combos";
 	 combo_DOUBLE_QUOTES {
             timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <40 17>;
+            key-positions = <17 40>;
             bindings = <&kp DOUBLE_QUOTES>;
         };
     };
 };
 
+/ {
+    combos {
+        compatible = "zmk,combos";
+	 combo_CARET {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <25 40>;
+            bindings = <&kp CARET>;
+        };
+    };
+};
 
+/ {
+    combos {
+        compatible = "zmk,combos";
+	 combo_AMPS {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <26 40>;
+            bindings = <&kp AMPS>;
+        };
+    };
+};
+
+/ {
+    combos {
+        compatible = "zmk,combos";
+	 combo_PERCENT {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <27 40>;
+            bindings = <&kp PERCENT>;
+        };
+    };
+};
+
+/ {
+    combos {
+        compatible = "zmk,combos";
+	 combo_LBKT {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <28 40>;
+            bindings = <&kp LBKT>;
+        };
+    };
+};
+
+/ {
+    combos {
+        compatible = "zmk,combos";
+	 combo_SINGLE_QUOTE {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <29 40>;
+            bindings = <&kp SINGLE_QUOTE>;
+        };
+    };
+};
 
 / {
     conditional_layers {
