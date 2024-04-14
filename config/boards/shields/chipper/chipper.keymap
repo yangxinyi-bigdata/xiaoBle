@@ -22,27 +22,69 @@
 #define IOS 3
 #define SYS 4
 
-/ {
-    macros {
-	nayeon: nayeon {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_tap_time 10>
-		,<&macro_tap &kp N &kp A &kp Y &kp E &kp O &kp N>
-        ;
-        };
-    };
-};
-
 
 / {
     combos {
         compatible = "zmk,combos";
-	 combo_cw {
+	 combo_PERCENT {
             timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <6 30>;
-            bindings = <&nayeon>;
+            key-positions = <27 40>;
+            bindings = <&kp PERCENT>;
+        };
+    };
+};
+
+/ {
+    combos {
+        compatible = "zmk,combos";
+	 combo_LBKT {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <28 40>;
+            bindings = <&kp LBKT>;
+        };
+    };
+};
+
+/ {
+    combos {
+        compatible = "zmk,combos";
+	 combo_SINGLE_QUOTE {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <29 40>;
+            bindings = <&kp SINGLE_QUOTE>;
+        };
+    };
+};
+
+/ {
+    combos {
+        compatible = "zmk,combos";
+	 combo_PLUS {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <6 40>;
+            bindings = <&kp PLUS>;
+        };
+    };
+};
+
+/ {
+    combos {
+        compatible = "zmk,combos";
+	 combo_MINUS {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <18 40>;
+            bindings = <&kp MINUS>;
+        };
+    };
+};
+
+/ {
+    combos {
+        compatible = "zmk,combos";
+	 combo_EQUAL {
+            timeout-ms = <COMBO_TIMEOUT>;
+            key-positions = <30 40>;
+            bindings = <&kp EQUAL>;
         };
     };
 };
@@ -113,38 +155,7 @@
     };
 };
 
-/ {
-    combos {
-        compatible = "zmk,combos";
-	 combo_PERCENT {
-            timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <40 27>;
-            bindings = <&kp PERCENT>;
-        };
-    };
-};
 
-/ {
-    combos {
-        compatible = "zmk,combos";
-	 combo_LBKT {
-            timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <40 28>;
-            bindings = <&kp LBKT>;
-        };
-    };
-};
-
-/ {
-    combos {
-        compatible = "zmk,combos";
-	 combo_SINGLE_QUOTE {
-            timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <40 29>;
-            bindings = <&kp SINGLE_QUOTE>;
-        };
-    };
-};
 
 / {
     conditional_layers {
