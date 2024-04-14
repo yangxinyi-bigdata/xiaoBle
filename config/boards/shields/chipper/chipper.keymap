@@ -14,7 +14,7 @@
 #define XXX &none
 #define ___ &trans
 
-#define COMBO_TIMEOUT 60
+#define COMBO_TIMEOUT 200
 
 #define DEF 0
 #define NAV 1
