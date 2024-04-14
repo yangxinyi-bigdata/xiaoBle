@@ -3,6 +3,8 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 
+CONFIG_ZMK_COMBO_MAX_COMBOS_PER_KEY=50
+
 /* map 6 extra keys */
 #define X_LT  &kp TAB
 #define X_LM  &kp LSHIFT
@@ -94,7 +96,7 @@
         compatible = "zmk,combos";
 	 combo_BACKSLASH {
             timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <40 3>;
+            key-positions = <3 40>;
             bindings = <&kp BACKSLASH>;
         };
     };
@@ -105,7 +107,7 @@
         compatible = "zmk,combos";
 	 combo_LBRC {
             timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <40 4>;
+            key-positions = <4 40>;
             bindings = <&kp LBRC>;
         };
     };
@@ -116,7 +118,7 @@
         compatible = "zmk,combos";
 	 combo_COLON {
             timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <40 5>;
+            key-positions = <5 40>;
             bindings = <&kp COLON>;
         };
     };
@@ -127,7 +129,7 @@
         compatible = "zmk,combos";
 	 combo_UNDERSCORE {
             timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <40 15>;
+            key-positions = <15 40>;
             bindings = <&kp UNDERSCORE>;
         };
     };
