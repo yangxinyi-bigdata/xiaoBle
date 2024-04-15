@@ -200,16 +200,6 @@
     };
 };
 
-/ {
-    combos {
-        compatible = "zmk,combos";
-	 combo_LBRC {
-            timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <4 40>;
-            bindings = <&kp LBRC>;
-        };
-    };
-};
 
 / {
     combos {
@@ -256,16 +246,6 @@
     };
 };
 
-/ {
-    combos {
-        compatible = "zmk,combos";
-	 combo_LPAR {
-            timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <16 40>;
-            bindings = <&kp LPAR>;
-        };
-    };
-};
 
 / {
     combos {
@@ -311,16 +291,6 @@
     };
 };
 
-/ {
-    combos {
-        compatible = "zmk,combos";
-	 combo_LBKT {
-            timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <28 40>;
-            bindings = <&kp LBKT>;
-        };
-    };
-};
 
 / {
     combos {
