@@ -30,7 +30,7 @@
 };
 
 &mt {
-    tapping-term-ms = <100>;
+    tapping-term-ms = <200>;
 };
 
 / {
@@ -397,7 +397,7 @@
         dance_COLON: dance_COLON {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <100>;
             bindings = <&kp COLON>, <&kp SEMICOLON>;
         };
     };
@@ -427,11 +427,11 @@
 
                         bindings = <
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬──────────────────┬──────────────────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-    ___  &kp EXCLAMATION &kp AT_SIGN    &kp BACKSLASH  &mt LBRC RBRC     &mt COLON SEMICOLON   &kp PLUS     &kp NUMBER_7  &command_8   &kp NUMBER_9  &lt FN ASTERISK  &kp SLASH
+    ___  &kp EXCLAMATION &kp AT_SIGN    &kp BACKSLASH  &mt RBRC LBRC     &mt SEMICOLON COLON    &kp PLUS     &kp NUMBER_7  &command_8   &kp NUMBER_9  &lt FN ASTERISK  &kp SLASH
 //├──────┤ ├─────────────┼─────────────┼─────────────┼──────────────────┼──────────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    ___      &kp HASH     &kp DOLLAR   &kp UNDERSCORE  &mt LPAR RPAR      &kp DOUBLE_QUOTES  &kp MINUS    &command_4   &command_5     &command_6        ___            ___
+    ___      &kp HASH     &kp DOLLAR   &kp UNDERSCORE  &mt RPAR LPAR      &kp DOUBLE_QUOTES   &kp MINUS    &command_4   &command_5     &command_6        ___            ___
 //├──────┤ ├─────────────┼─────────────┼─────────────┼──────────────────┼──────────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-   &kp GRAVE  &kp CARET    &kp AMPS       &kp PERCENT  &mt LBKT RBKT      &kp SINGLE_QUOTE    &kp EQUAL    &kp NUMBER_1  &kp NUMBER_2   &kp NUMBER_3   &kp DOT     &comma_nav
+   &kp GRAVE  &kp CARET    &kp AMPS       &kp PERCENT  &mt RBKT LBKT      &kp SINGLE_QUOTE    &kp EQUAL    &kp NUMBER_1  &kp NUMBER_2   &kp NUMBER_3   &kp DOT     &comma_nav
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼──────────────────┼──────────────────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
                                                      ___             ___           ___          ___           ___         &kp NUMBER_0
 //                                               ╰────────────┼──────────────┴─────────────╯ ╰─────────────┴─────────────┼─────────────╯
