@@ -171,6 +171,18 @@
                 ;
         };
 
+        tab_page_test: tab_page_test {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_wait_time 10000>
+                , <&macro_press &kp TAB>
+                , <&macro_wait_time 10000>
+                , <&macro_release &kp TAB>
+                ;
+        };
+
         go_iPhone: go_iPhone {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -321,7 +333,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <100>;
-            bindings = <MTLGUI>, <&tab_page_two>, <&tab_page_three>;
+            bindings = <MTLGUI>, <&tab_page_two>, <&tab_page_test>;
         };
     };
 };
