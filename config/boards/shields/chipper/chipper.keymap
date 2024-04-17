@@ -11,6 +11,8 @@
 #define X_RM  &kp RETURN
 #define X_RB  &dancetonav
 
+#define MTLGUI &mt LGUI LG(TAB)
+
 #define XXX &none
 #define ___ &trans
 
@@ -146,6 +148,30 @@
 
 / {
     macros {
+
+        tab_page_two: tab_page_two {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp TAB>
+                , <&macro_tap &kp TAB>
+                , <&macro_release &kp LGUI>
+                ;
+        };
+
+        tab_page_three: tab_page_three {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings
+                = <&macro_press &kp LGUI>
+                , <&macro_tap &kp TAB>
+                , <&macro_tap &kp TAB>
+                , <&macro_tap &kp TAB>
+                , <&macro_release &kp LGUI>
+                ;
+        };
+
         go_iPhone: go_iPhone {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -291,6 +317,13 @@
             tapping-term-ms = <100>;
             bindings = <&kp COLON>, <&kp SEMICOLON>;
         };
+
+        dance_tab: dance_tab {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <100>;
+            bindings = <MTLGUI>, <&tab_page_two>, <&tab_page_three>;
+        };
     };
 };
 
@@ -308,7 +341,7 @@
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤           ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
   &dance_tilde  &kp Z        &kp X        &kp C          &kp V          &kp B                     &kp N         &kp M      &kp COMMA      &kp DOT      &kp SLASH      &dancetonav
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤           ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
-                                      &mt LEFT_ALT TAB  &kp LEFT_COMMAND  &kp SPC               &kp ENTER    &lt NAV NUMBER_2  &mt LCTRL NUMBER_3
+                                        &mt LEFT_ALT TAB  &dance_tab  &kp SPC               &kp ENTER    &lt NAV NUMBER_2  &mt LCTRL NUMBER_3
 //                                     ╰────────────┼──────────────┴─────────────╯           ╰─────────────┴─────────────┼─────────────╯
                         >;
                 };
