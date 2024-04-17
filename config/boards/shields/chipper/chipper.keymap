@@ -11,7 +11,7 @@
 #define X_RM  &kp RETURN
 #define X_RB  &dancetonav
 
-#define MTLGUI &mtlgui LGUI LG(TAB)
+#define MTLGUI &mtlgui
 
 #define XXX &none
 #define ___ &trans
@@ -63,8 +63,9 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "hold-preferred";
-            tapping-term-ms = <100>;
-            bindings = <&kp>, <&kp>;
+            tapping-term-ms = <200>;
+            hold-while-undecided;
+            bindings = <&kp LGUI>, <&kp LG(TAB)>;
         };
 
         to_f_layer: to_f_layer {
@@ -324,7 +325,7 @@
             bindings = <MTLGUI>, <&tab_page_two>;
         };
     };
-};
+};www
 
 
 / {
