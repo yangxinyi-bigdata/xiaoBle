@@ -332,7 +332,7 @@
         dance_tab: dance_tab {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <100>;
+            tapping-term-ms = <300>;
             bindings = <MTLGUI>, <&tab_page_two>, <&tab_page_test>;
         };
     };
@@ -367,7 +367,7 @@
 //├──────┤ ├─────────────┼─────────────┼─────────────┼──────────────────┼──────────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
    &kp GRAVE  &kp CARET    &kp AMPS       &kp PERCENT  &mk RBKT LBKT      &kp SINGLE_QUOTE    &kp EQUAL    &kp NUMBER_1  &kp NUMBER_2   &kp NUMBER_3   &kp DOT     &comma_nav
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼──────────────────┼──────────────────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
-                                                     ___             ___           ___          ___           ___         &kp NUMBER_0
+                                                &tab_page_test     &tab_page_two          ___          ___           ___         &kp NUMBER_0
 //                                               ╰────────────┼──────────────┴─────────────╯ ╰─────────────┴─────────────┼─────────────╯
                         >;
                 };
