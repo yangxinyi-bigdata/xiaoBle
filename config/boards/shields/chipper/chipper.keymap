@@ -11,7 +11,7 @@
 #define X_RM  &kp RETURN
 #define X_RB  &dancetonav
 
-#define MTLGUI &mt LGUI LG(TAB)
+#define MTLGUI &mtlgui LGUI LG(TAB)
 
 #define XXX &none
 #define ___ &trans
@@ -56,6 +56,14 @@
             #binding-cells = <2>;
             flavor = "tap-preferred";
             tapping-term-ms = <200>;
+            bindings = <&kp>, <&kp>;
+        };
+
+        mtlgui: mtlgui {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <100>;
             bindings = <&kp>, <&kp>;
         };
 
@@ -153,21 +161,12 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&kp LGUI>
-                , <&kp TAB>
-                , <&macro_wait_time 100>
-                , <&kp TAB>
-                ;
-        };
-
-        tab_page_three: tab_page_three {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
                 = <&macro_press &kp LGUI>
+                , <&macro_wait_time 100>
                 , <&macro_tap &kp TAB>
+                , <&macro_wait_time 100>
                 , <&macro_tap &kp TAB>
-                , <&macro_tap &kp TAB>
+                , <&macro_wait_time 100>
                 , <&macro_release &kp LGUI>
                 ;
         };
