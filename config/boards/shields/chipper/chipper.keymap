@@ -155,6 +155,7 @@
             bindings
                 = <&macro_press &kp LGUI>
                 , <&kp TAB>
+                , <&macro_wait_time 300>
                 , <&kp TAB>
                 , <&macro_release &kp LGUI>
                 ;
