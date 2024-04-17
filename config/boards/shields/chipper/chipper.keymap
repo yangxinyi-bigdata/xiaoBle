@@ -34,6 +34,19 @@
 };
 
 / {
+    behaviors {
+        mk: two_LBRC_marks {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            retro-tap;
+            tapping-term-ms = <200>;
+            bindings = <&kp>, <&kp>;
+        };
+    };
+
+
+/ {
     conditional_layers {
         compatible = "zmk,conditional-layers";
         tri_layer {
@@ -53,56 +66,35 @@
             bindings = <&kp I>, <&kp UP_ARROW>;
             mods = <(MOD_LGUI)>;
         };
-    };
-};
 
-
-/ {
-    behaviors {
         go_down: go_down {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp K>, <&kp DOWN_ARROW>;
             mods = <(MOD_LGUI)>;
         };
-    };
-};
 
-/ {
-    behaviors {
         go_right: go_right {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp L>, <&kp RIGHT_ARROW>;
             mods = <(MOD_LGUI)>;
         };
-    };
-};
 
-/ {
-    behaviors {
         go_left: go_left {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp J>, <&kp LEFT_ARROW>;
             mods = <(MOD_LGUI)>;
         };
-    };
-};
 
-/ {
-    behaviors {
         go_page_up: go_page_up {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp Y>, <&kp PAGE_UP>;
             mods = <(MOD_LGUI)>;
         };
-    };
-};
 
-/ {
-    behaviors {
         go_page_down: go_page_down {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -112,6 +104,7 @@
     };
 };
 
+
 / {
     behaviors {
         command_4: command_4 {
@@ -120,83 +113,28 @@
             bindings = <&kp NUMBER_4>, <&kp LG(LEFT_ARROW)>;
             mods = <(MOD_LGUI)>;
         };
-    };
-};
 
-/ {
-    behaviors {
         command_8: command_8 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp NUMBER_8>, <&kp LG(UP_ARROW)>;
             mods = <(MOD_LGUI)>;
         };
-    };
-};
 
-/ {
-    behaviors {
         command_5: command_5 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp NUMBER_5>, <&kp LG(DOWN_ARROW)>;
             mods = <(MOD_LGUI)>;
         };
-    };
-};
 
-/ {
-    behaviors {
         command_6: command_6 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp NUMBER_6>, <&kp LG(RIGHT_ARROW)>;
             mods = <(MOD_LGUI)>;
         };
-    };
-};
 
-
-/ {
-    behaviors {
-        go_option: go_option {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&lt NAV SEMI>, <&kp LEFT_ALT>;
-            mods = <(MOD_LGUI)>;
-        };
-    };
-};
-
-/ {
-    behaviors {
-        go_ctrl: go_ctrl {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp H>, <&kp LCTRL>;
-            mods = <(MOD_LGUI)>;
-        };
-    };
-};
-
-/ {
-    behaviors {
-        go_caps: go_caps {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp Y>, <&kp CAPS>;
-            mods = <(MOD_LGUI)>;
-        };
-    };
-};
-
-/ {
-    behaviors {
-        bspc_del: bspc_del {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp BACKSPACE>, <&kp DELETE>;
-            mods = <(MOD_LSFT)>;
         };
     };
 };
@@ -211,11 +149,7 @@
                 , <&tog IOS>
                 ;
         };
-    };
-};
 
-/ {
-    macros {
         go_mac: go_mac {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -224,12 +158,8 @@
                 , <&to 0>
                 ;
         };
-    };
-};
 
-/ {
-    macros {
-         go_vision: go_vision {
+        go_vision: go_vision {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -237,12 +167,8 @@
                 , <&tog IOS>
                 ;
         };
-    };
-};
 
-/ {
-    macros {
-         go_ipad: go_ipad {
+        go_ipad: go_ipad {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -250,12 +176,8 @@
                 , <&tog IOS>
                 ;
         };
-    };
-};
 
-/ {
-    macros {
-         go_win: go_win {
+       go_win: go_win {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
@@ -265,6 +187,7 @@
         };
     };
 };
+
 
 // 下面是Notion快捷键
 
@@ -276,35 +199,21 @@
             bindings = <&kp A>, <&kp LG(LA(NUMBER_1))>;
             mods = <(MOD_LALT)>;
         };
-    };
-};
 
-
-
-/ {
-    behaviors {
         notion_h2: notion_h2 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp S>, <&kp LG(LA(NUMBER_2))>;
             mods = <(MOD_LALT)>;
         };
-    };
-};
 
-/ {
-    behaviors {
         notion_h3: notion_h3 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp D>, <&kp LG(LA(NUMBER_3))>;
             mods = <(MOD_LALT)>;
         };
-    };
-};
 
-/ {
-    behaviors {
         notion_h0: notion_h0 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -314,6 +223,7 @@
     };
 };
 
+
 / {
     behaviors {
         tonav: tonav {
@@ -322,33 +232,21 @@
             bindings = <&none>, <&tog NAV>;
             mods = <(MOD_LALT)>;
         };
-    };
-};
 
-/ {
-    behaviors {
         dancetonav: dancetonav {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&none>, <&tog NAV>;
         };
-    };
-};
 
-/ {
-    behaviors {
         comma_nav: comma_nav {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp COMMA>, <&tog NAV>;
         };
-    };
-};
 
-/ {
-    behaviors {
         dance_tilde: dance_tilde {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
@@ -367,33 +265,21 @@
             tapping-term-ms = <100>;
             bindings = <&kp LBRC>, <&kp RBRC>;
         };
-    };
-};
 
-/ {
-    behaviors {
         dance_LPAR: dance_LPAR {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <100>;
             bindings = <&kp LPAR>, <&kp RPAR>;
         };
-    };
-};
 
-/ {
-    behaviors {
         dance_LBKT: dance_LBKT {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <100>;
             bindings = <&kp LBKT>, <&kp RBKT>;
         };
-    };
-};
 
-/ {
-    behaviors {
         dance_COLON: dance_COLON {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
@@ -402,7 +288,6 @@
         };
     };
 };
-
 
 
 / {
@@ -427,11 +312,11 @@
 
                         bindings = <
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬──────────────────┬──────────────────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-    ___  &kp EXCLAMATION &kp AT_SIGN    &kp BACKSLASH  &mt RBRC LBRC     &mt SEMICOLON COLON    &kp PLUS     &kp NUMBER_7  &command_8   &kp NUMBER_9  &lt FN ASTERISK  &kp SLASH
+    ___  &kp EXCLAMATION &kp AT_SIGN    &kp BACKSLASH   &mk RBRC LBRC    &mk SEMICOLON COLON  &kp PLUS     &kp NUMBER_7  &command_8   &kp NUMBER_9  &lt FN ASTERISK  &kp SLASH
 //├──────┤ ├─────────────┼─────────────┼─────────────┼──────────────────┼──────────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    ___      &kp HASH     &kp DOLLAR   &kp UNDERSCORE  &mt RPAR LPAR      &kp DOUBLE_QUOTES   &kp MINUS    &command_4   &command_5     &command_6        ___            ___
+    ___      &kp HASH     &kp DOLLAR   &kp UNDERSCORE  &mk RPAR LPAR      &kp DOUBLE_QUOTES   &kp MINUS    &command_4   &command_5     &command_6        ___            ___
 //├──────┤ ├─────────────┼─────────────┼─────────────┼──────────────────┼──────────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-   &kp GRAVE  &kp CARET    &kp AMPS       &kp PERCENT  &mt RBKT LBKT      &kp SINGLE_QUOTE    &kp EQUAL    &kp NUMBER_1  &kp NUMBER_2   &kp NUMBER_3   &kp DOT     &comma_nav
+   &kp GRAVE  &kp CARET    &kp AMPS       &kp PERCENT  &mk RBKT LBKT      &kp SINGLE_QUOTE    &kp EQUAL    &kp NUMBER_1  &kp NUMBER_2   &kp NUMBER_3   &kp DOT     &comma_nav
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼──────────────────┼──────────────────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
                                                      ___             ___           ___          ___           ___         &kp NUMBER_0
 //                                               ╰────────────┼──────────────┴─────────────╯ ╰─────────────┴─────────────┼─────────────╯
