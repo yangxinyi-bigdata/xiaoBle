@@ -33,18 +33,6 @@
     tapping-term-ms = <200>;
 };
 
-/ {
-    behaviors {
-        mk: two_LBRC_marks {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "tap-preferred";
-            retro-tap;
-            tapping-term-ms = <200>;
-            bindings = <&kp>, <&kp>;
-        };
-    };
-
 
 / {
     conditional_layers {
@@ -60,6 +48,16 @@
 
 / {
     behaviors {
+
+        mk: two_LBRC_marks {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            retro-tap;
+            tapping-term-ms = <200>;
+            bindings = <&kp>, <&kp>;
+        };
+
         go_up: go_up {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
