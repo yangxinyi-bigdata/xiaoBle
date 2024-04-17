@@ -320,7 +320,7 @@
         dance_tab: dance_tab {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <200>;
             bindings = <MTLGUI>, <&tab_page_two>;
         };
     };
@@ -338,7 +338,7 @@
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤           ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
   &kp LSHIFT  &notion_h1     &notion_h2   &notion_h3    &notion_h0        &kp G                &go_page_down   &go_left      &go_down     &go_right   &kp BACKSPACE &mt RCMD RALT
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤           ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-  &kp LCTRL NUMBER_3  &kp Z        &kp X        &kp C          &kp V          &kp B                     &kp N         &kp M      &kp COMMA      &kp DOT      &kp SLASH      &dancetonav
+  &kp LCTRL  &kp Z        &kp X        &kp C          &kp V          &kp B                     &kp N         &kp M      &kp COMMA      &kp DOT      &kp SLASH      &dancetonav
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤           ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
                                         &mt LEFT_ALT TAB  &dance_tab  &kp SPC               &kp ENTER    &lt NAV NUMBER_2  &mt LCTRL NUMBER_3
 //                                     ╰────────────┼──────────────┴─────────────╯           ╰─────────────┴─────────────┼─────────────╯
