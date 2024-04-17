@@ -11,7 +11,7 @@
 #define X_RM  &kp RETURN
 #define X_RB  &dancetonav
 
-#define MTLGUI &mtlgui
+#define MTLGUI &mtlgui LGUI LG(TAB)
 
 #define XXX &none
 #define ___ &trans
@@ -61,10 +61,10 @@
 
         mtlgui: mtlgui {
             compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <0>;
+            #binding-cells = <2>;
             flavor = "hold-preferred";
             tapping-term-ms = <200>;
-            bindings = <&kp LGUI>, <&kp LG(TAB)>;
+            bindings = <&kp>, <&kp>;
         };
 
         to_f_layer: to_f_layer {
@@ -340,7 +340,7 @@
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤           ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
   &kp LCTRL  &kp Z        &kp X        &kp C          &kp V          &kp B                     &kp N         &kp M      &kp COMMA      &kp DOT      &kp SLASH      &dancetonav
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤           ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
-                                        &mt LEFT_ALT TAB  &dance_tab  &kp SPC               &kp ENTER    &lt NAV NUMBER_2  &mt LCTRL NUMBER_3
+                                    &mt LEFT_ALT TAB  &mtlgui LGUI LG(TAB)  &kp SPC             &kp ENTER    &lt NAV NUMBER_2  &mt LCTRL NUMBER_3
 //                                     ╰────────────┼──────────────┴─────────────╯           ╰─────────────┴─────────────┼─────────────╯
                         >;
                 };
