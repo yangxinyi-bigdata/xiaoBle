@@ -171,18 +171,6 @@
                 ;
         };
 
-        tab_page_test: tab_page_test {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LGUI>
-                , <&macro_wait_time 10000>
-                , <&macro_press &kp TAB>
-                , <&macro_wait_time 10000>
-                , <&macro_release &kp TAB>
-                ;
-        };
-
         go_iPhone: go_iPhone {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -333,7 +321,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <300>;
-            bindings = <MTLGUI>, <&tab_page_two>, <&tab_page_test>;
+            bindings = <MTLGUI>, <&tab_page_two>;
         };
     };
 };
@@ -350,7 +338,7 @@
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤           ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
   &kp LSHIFT  &notion_h1     &notion_h2   &notion_h3    &notion_h0        &kp G                &go_page_down   &go_left      &go_down     &go_right   &kp BACKSPACE &mt RCMD RALT
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤           ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-  &dance_tilde  &kp Z        &kp X        &kp C          &kp V          &kp B                     &kp N         &kp M      &kp COMMA      &kp DOT      &kp SLASH      &dancetonav
+  &kp LCTRL NUMBER_3  &kp Z        &kp X        &kp C          &kp V          &kp B                     &kp N         &kp M      &kp COMMA      &kp DOT      &kp SLASH      &dancetonav
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤           ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
                                         &mt LEFT_ALT TAB  &dance_tab  &kp SPC               &kp ENTER    &lt NAV NUMBER_2  &mt LCTRL NUMBER_3
 //                                     ╰────────────┼──────────────┴─────────────╯           ╰─────────────┴─────────────┼─────────────╯
@@ -361,13 +349,13 @@
 
                         bindings = <
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬──────────────────┬──────────────────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-    ___  &kp EXCLAMATION &kp AT_SIGN    &kp BACKSLASH   &mk RBRC LBRC    &mk SEMICOLON COLON  &kp PLUS     &kp NUMBER_7  &command_8   &kp NUMBER_9  &to_f_layer FN ASTERISK  &kp SLASH
+   &kp GRAVE &kp EXCLAMATION &kp AT_SIGN    &kp BACKSLASH   &mk RBRC LBRC    &mk SEMICOLON COLON  &kp PLUS     &kp NUMBER_7  &command_8   &kp NUMBER_9  &to_f_layer FN ASTERISK  &kp SLASH
 //├──────┤ ├─────────────┼─────────────┼─────────────┼──────────────────┼──────────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
     ___      &kp HASH     &kp DOLLAR   &kp UNDERSCORE  &mk RPAR LPAR      &kp DOUBLE_QUOTES   &kp MINUS    &command_4   &command_5     &command_6        ___            ___
 //├──────┤ ├─────────────┼─────────────┼─────────────┼──────────────────┼──────────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-   &kp GRAVE  &kp CARET    &kp AMPS       &kp PERCENT  &mk RBKT LBKT      &kp SINGLE_QUOTE    &kp EQUAL    &kp NUMBER_1  &kp NUMBER_2   &kp NUMBER_3   &kp DOT     &comma_nav
+   ___        &kp CARET    &kp AMPS       &kp PERCENT  &mk RBKT LBKT      &kp SINGLE_QUOTE    &kp EQUAL    &kp NUMBER_1  &kp NUMBER_2   &kp NUMBER_3   &kp DOT     &comma_nav
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼──────────────────┼──────────────────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
-                                                &tab_page_test     &tab_page_two          ___          ___           ___         &kp NUMBER_0
+                                                      ___           ___          ___             ___           ___         &kp NUMBER_0
 //                                               ╰────────────┼──────────────┴─────────────╯ ╰─────────────┴─────────────┼─────────────╯
                         >;
                 };
