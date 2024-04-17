@@ -153,11 +153,10 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp LGUI>
+                = <&kp LGUI>
                 , <&kp TAB>
-                , <&macro_wait_time 300>
+                , <&macro_wait_time 100>
                 , <&kp TAB>
-                , <&macro_release &kp LGUI>
                 ;
         };
 
