@@ -179,7 +179,7 @@
             #binding-cells = <0>;
             bindings
                 = <&bt BT_SEL 1>
-                , <&tog IOS>
+                , <&to 0>
                 ;
         };
 
@@ -197,7 +197,7 @@
             #binding-cells = <0>;
             bindings
                 = <&bt BT_SEL 2>
-                , <&tog IOS>
+                , <&to 0>
                 ;
         };
 
@@ -206,7 +206,7 @@
             #binding-cells = <0>;
             bindings
                 = <&bt BT_SEL 3>
-                , <&tog IOS>
+                , <&to 0>
                 ;
         };
 
@@ -346,9 +346,9 @@
 
                         bindings = <
 //╭──────╮ ╭─────────────┬─────────────┬────────────────────┬───────────────────────┬──────────────────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
- &kp GRAVE &kp EXCLAMATION &kp AT_SIGN  &mk_tap BACKSLASH PIPE &mk_tap RBRC LBRC   &mk_tap SEMICOLON COLON  &kp PLUS   &kp NUMBER_7  &command_8   &kp NUMBER_9  &layer_tap FN ASTERISK  &kp SLASH
+ &kp GRAVE &kp EXCLAMATION &kp AT_SIGN  &mk_tap BACKSLASH PIPE &mk_tap RBRC LBRC     &kp DOUBLE_QUOTES    &kp PLUS   &kp NUMBER_7  &command_8   &kp NUMBER_9  &layer_tap FN ASTERISK  &kp SLASH
 //├──────┤ ├─────────────┼─────────────┼────────────────────┼───────────────────────┼──────────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    ___      &kp HASH     &kp DOLLAR       &kp UNDERSCORE     &mk_tap RPAR LPAR       &kp DOUBLE_QUOTES   &kp MINUS    &command_4   &command_5     &command_6        ___            ___
+    ___      &kp HASH     &kp DOLLAR       &kp UNDERSCORE     &mk_tap RPAR LPAR      &mk_tap SEMICOLON COLON &kp MINUS    &command_4   &command_5     &command_6        ___            ___
 //├──────┤ ├─────────────┼─────────────┼────────────────────┼───────────────────────┼──────────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
    ___        &kp CARET    &kp AMPS       &kp PERCENT         &mk_tap RBKT LBKT      &kp SINGLE_QUOTE      &kp EQUAL    &kp NUMBER_1  &kp NUMBER_2   &kp NUMBER_3   &kp DOT     &comma_nav
 //├──────┤ ╰─────────────┼─────────────┴────────────────────┼───────────────────────┼──────────────────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
@@ -391,13 +391,13 @@
 
                         bindings = <
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_CLR     &bt BT_NXT   &bt BT_PRV      ___           ___           ___       ___
+  &bt BT_CLR  &bt BT_DISC 0  &bt BT_DISC 1 &bt BT_DISC 2 &bt BT_DISC 3 &bt BT_DISC 4   &bt BT_NXT   &bt BT_PRV      ___           ___           ___       ___
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-  &bt BT_DISC 0  &bt BT_DISC 1 &bt BT_DISC 2 &bt BT_DISC 3 &bt BT_DISC 4  &bootloader  &bootloader   &kp T          ___           ___           ___           ___
+  &bootloader &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    ___            &kp T          ___           ___           ___         &bootloader
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-   &go_mac   &go_iPhone     &go_vision    &go_ipad      &go_win      &sys_reset       &sys_reset    ___           ___           ___           ___           ___
+  &sys_reset  &go_mac      &go_iPhone     &go_vision     &go_ipad      &go_win        &sys_reset    ___           ___           ___           ___           ___
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
-                                           &tog IOS      &tog NAV       ___            ___           ___             ___
+                                            ___        &tog NAV       ___            ___           ___             ___
 //                                      ╰─────────────┴────────────┴─────────────╯ ╰─────────────┴──────────────┴─────────────╯
                         >;
 		};
