@@ -75,7 +75,7 @@
             bindings = <&kp>, <&kp>;
         };
         
-/*     layer_tap: layer_tap {
+    layer_tap: layer_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
@@ -86,9 +86,9 @@
             hold-while-undecided;  // 按下后立即触发换层功能, 除非什么也不按直接松开, 否则都是按住功能
             bindings = <&mo>, <&kp>;
         };
- */
 
-        layer_tap: layer_tap {
+
+        layer_hold: layer_hold {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "hold-preferred";
@@ -374,7 +374,7 @@
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤           ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
   &kp LCTRL  &kp Z        &kp X         &kp C          &kp V          &kp B                     &kp N         &kp M      &kp COMMA      &kp DOT      &kp SLASH      &dancetonav
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤           ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
-                                    &mt LEFT_ALT TAB  &mt LGUI LG(TAB)  &kp SPC             &kp ENTER   &layer_tap NAV BACKSPACE  &mk_tap RGUI ESC
+                                    &mt LEFT_ALT TAB  &mt LGUI LG(TAB)  &kp SPC             &kp ENTER   &layer_hold NAV BACKSPACE  &mk_tap RGUI ESC
 //                                     ╰────────────┼──────────────┴─────────────╯           ╰─────────────┴─────────────┼─────────────╯
                         >;
                 };
@@ -434,7 +434,7 @@
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
    &kp LEFT_ALT  ___            ___           ___          ___             ___            ___            ___          ___              ___         ___      &dancetonav_win
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
-                                      &mt LWIN TAB &mt LCTRL LC(TAB)    ___            ___    &layer_tap NAV BACKSPACE   &mk_tap RCTRL ESC
+                                      &mt LWIN TAB &mt LCTRL LC(TAB)    ___            ___    &layer_hold NAV BACKSPACE   &mk_tap RCTRL ESC
 //                                     ╰─────────────┴─────────────┴─────────────╯ ╰─────────────┴─────────────┼─────────────╯
                         >;
 		};
