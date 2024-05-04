@@ -322,13 +322,6 @@
 
 / {
     behaviors {
-        dance: dance {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <2>;
-            tapping-term-ms = <100>;
-            bindings = <&kp>, <&kp>;
-        };
-
         dance_LBRC: dance_LBRC {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
@@ -357,6 +350,20 @@
             bindings = <&kp COLON>, <&kp SEMICOLON>;
         };
 
+        dance_PIPE: dance_PIPE {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <100>;
+            bindings = <&kp PIPE>, <&kp BACKSLASH>;
+        };
+
+        dance_GRAVE: dance_GRAVE {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <100>;
+            bindings = <&kp GRAVE>, <&kp TILDE>;
+        };
+
     };
 };
 
@@ -368,7 +375,7 @@
                 DEF_layer {
                         bindings = <
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮           ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-   &dance ESC TILDE &kp Q    &kp W          &kp E          &kp R         &kp T                &go_page_up   &kp U          &go_up      &kp O     &layer_tap FN P  &kp DELETE
+   &kp ESC         &kp Q    &kp W          &kp E          &kp R         &kp T                &go_page_up   &kp U          &go_up      &kp O     &layer_tap FN P  &kp DELETE
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤           ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
   &kp LSHIFT  &notion_h1     &notion_h2   &notion_h3    &notion_h0        &kp G                &go_page_down   &go_left      &go_down     &go_right   &kp NUMBER_2 &mt RSHIFT NUMBER_3
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤           ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
@@ -383,11 +390,11 @@
 
                         bindings = <
 //╭──────╮ ╭─────────────┬─────────────┬────────────────────┬───────────────────────┬──────────────────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
-&dance GRAVE TILDE &kp EXCLAMATION &kp AT_SIGN  &dance PIPE BACKSLASH  &dance LBRC RBRC  &kp DOUBLE_QUOTES    &kp PLUS   &kp NUMBER_7  &command_8   &kp NUMBER_9  &layer_tap FN ASTERISK  &kp SLASH
+&dance_GRAVE  &kp EXCLAMATION &kp AT_SIGN  &dance_PIPE         &dance_LBRC             &kp DOUBLE_QUOTES    &kp PLUS   &kp NUMBER_7  &command_8   &kp NUMBER_9  &layer_tap FN ASTERISK  &kp SLASH
 //├──────┤ ├─────────────┼─────────────┼────────────────────┼───────────────────────┼──────────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    ___      &kp HASH     &kp DOLLAR       &kp UNDERSCORE     &dance LPAR RPAR       &dance COLON SEMICOLON  &kp MINUS    &command_4   &command_5     &command_6        ___         ___
+    ___      &kp HASH     &kp DOLLAR       &kp UNDERSCORE       &dance_LPAR            &dance_COLON      &kp MINUS    &command_4   &command_5     &command_6        ___         ___
 //├──────┤ ├─────────────┼─────────────┼────────────────────┼───────────────────────┼──────────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-   ___        &kp CARET    &kp AMPS       &kp PERCENT         &dance LBKT RBKT     &kp SINGLE_QUOTE      &kp EQUAL    &kp NUMBER_1  &kp NUMBER_2   &kp NUMBER_3   &kp DOT        ___
+   ___        &kp CARET    &kp AMPS       &kp PERCENT           &dance_LBKT         &kp SINGLE_QUOTE      &kp EQUAL    &kp NUMBER_1  &kp NUMBER_2   &kp NUMBER_3   &kp DOT        ___
 //├──────┤ ╰─────────────┼─────────────┴────────────────────┼───────────────────────┼──────────────────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
                                                       ___           ___          ___             ___           ___         &kp NUMBER_0
 //                                               ╰────────────┼──────────────┴─────────────╯ ╰─────────────┴─────────────┼─────────────╯
