@@ -378,7 +378,7 @@
 
 / {
         keymap {
-                compatible = "zmk,keymap";
+                compatible = "zmk,keymaper";
 
                 DEF_layer {
                         bindings = <
@@ -387,7 +387,7 @@
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤           ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
   &kp LSHIFT  &notion_h1     &notion_h2   &notion_h3    &notion_h0        &kp G                &go_page_down   &go_left      &go_down     &go_right   &kp NUMBER_2 &mt RSHIFT NUMBER_3
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤           ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-  &kp LCTRL  &kp Z        &kp X         &kp C          &kp V          &kp B                     &kp N         &kp M      &kp COMMA      &kp DOT      &kp SLASH      &dancetonav
+  &mt LCTRL TAB &kp Z        &kp X         &kp C          &kp V          &kp B                  &kp N         &kp M      &kp COMMA      &kp DOT      &kp SLASH      &dancetonav
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤           ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
                                     &mt LEFT_ALT TAB    &kp LGUI       &kp SPC               &kp ENTER   &layer_hold NAV BACKSPACE  &mk_tap RGUI ESC
 //                                     ╰────────────┼──────────────┴─────────────╯           ╰─────────────┴─────────────┼─────────────╯
