@@ -378,7 +378,7 @@
 
 / {
         keymap {
-                compatible = "zmk,keymaper";
+                compatible = "zmk,keymap";
 
                 DEF_layer {
                         bindings = <
