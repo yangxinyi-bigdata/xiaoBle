@@ -333,42 +333,42 @@
         dance_LBRC: dance_LBRC {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp LBRC>, <&kp RBRC>;
+            tapping-term-ms = <400>;
+            bindings = <&kp RS(LBKT)>, <&kp RS(RBKT)>;
         };
 
         dance_LPAR: dance_LPAR {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <400>;
             bindings = <&kp RS(N9)>, <&kp RS(N0)>;
         };
 
         dance_LBKT: dance_LBKT {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <400>;
             bindings = <&kp LBKT>, <&kp RBKT>;
         };
 
         dance_COLON: dance_COLON {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp COLON>, <&kp SEMICOLON>;
+            tapping-term-ms = <400>;
+            bindings = <&kp RS(SEMICOLON)>, <&kp SEMICOLON>;
         };
 
         dance_PIPE: dance_PIPE {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp PIPE>, <&kp BACKSLASH>;
+            tapping-term-ms = <400>;
+            bindings = <&kp RS(BACKSLASH)>, <&kp BACKSLASH>;
         };
 
         dance_GRAVE: dance_GRAVE {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <400>;
             bindings = <&kp GRAVE>, <&kp TILDE>;
         };
 
