@@ -341,7 +341,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp LPAR>, <&kp RPAR>;
+            bindings = <&kp RS(9)>, <&kp RS(0)>;
         };
 
         dance_LBKT: dance_LBKT {
@@ -399,7 +399,7 @@
 //╭──────╮ ╭─────────────┬─────────────┬────────────────────┬───────────────────────┬──────────────────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
 &dance_GRAVE  &kp EXCLAMATION &kp AT_SIGN  &dance_PIPE         &dance_LBRC             &kp DOUBLE_QUOTES    &kp PLUS   &kp NUMBER_7  &command_8   &kp NUMBER_9  &layer_tap FN ASTERISK  &kp SLASH
 //├──────┤ ├─────────────┼─────────────┼────────────────────┼───────────────────────┼──────────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    ___      &kp HASH     &kp DOLLAR       &kp UNDERSCORE       &kp LPAR            &dance_COLON      &kp MINUS    &command_4   &command_5     &command_6        ___         ___
+    ___      &kp HASH     &kp DOLLAR       &kp UNDERSCORE       &dance_LPAR            &dance_COLON      &kp MINUS    &command_4   &command_5     &command_6        ___         ___
 //├──────┤ ├─────────────┼─────────────┼────────────────────┼───────────────────────┼──────────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
    ___        &kp CARET    &kp AMPS       &kp PERCENT           &dance_LBKT         &kp SINGLE_QUOTE      &kp EQUAL    &kp NUMBER_1  &kp NUMBER_2   &kp NUMBER_3   &kp DOT        ___
 //├──────┤ ╰─────────────┼─────────────┴────────────────────┼───────────────────────┼──────────────────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
