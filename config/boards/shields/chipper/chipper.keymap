@@ -341,7 +341,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp RS(9)>, <&kp RS(0)>;
+            bindings = <&kp RS(N9)>, <&kp RS(N0)>;
         };
 
         dance_LBKT: dance_LBKT {
