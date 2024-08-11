@@ -321,7 +321,7 @@
         F_RPAR: F_RPAR {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp f>, <&kp RPAR>;
+            bindings = <&kp F>, <&kp RPAR>;
             mods = <(MOD_RGUI)>;
         };
 
