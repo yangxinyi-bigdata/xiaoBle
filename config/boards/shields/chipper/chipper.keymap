@@ -325,6 +325,13 @@
             mods = <(MOD_RGUI)>;
         };
 
+        N3_COLON: N3_COLON {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&kp N3>, <&kp COLON>;
+            mods = <(MOD_LGUI, MOD_RGUI)>;
+        };
+
         tonav: tonav {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -421,7 +428,7 @@
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮           ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
   &kp GRAVE   &kp Q        &kp W       &E_BACKSLASH   &R_RBRC         &kp T                  &go_page_up      &kp U          &go_up      &kp O     &layer_tap FN P  &kp DELETE
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤           ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-  &kp LSHIFT  &notion_h1     &notion_h2   &notion_h3    &F_RPAR     &G_SEMICOLON              &go_page_down   &go_left      &go_down     &go_right   &kp NUMBER_2 &mt RSHIFT NUMBER_3
+  &kp LSHIFT  &notion_h1     &notion_h2   &notion_h3    &F_RPAR     &G_SEMICOLON              &go_page_down   &go_left      &go_down     &go_right   &kp NUMBER_2 &mt RSHIFT N3_COLON
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤           ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
   &mt LCTRL TAB &kp Z        &kp X         &kp C         &V_RBKT         &kp B                  &kp N         &kp M      &kp COMMA      &kp DOT      &kp SLASH    &mt RCTRL SEMICOLON
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤           ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
