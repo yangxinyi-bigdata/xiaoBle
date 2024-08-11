@@ -306,7 +306,7 @@
         V_RBKT: V_RBKT {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
-            bindings = <&kp v>, <&kp RBKT>;
+            bindings = <&kp V>, <&kp RBKT>;
             mods = <(MOD_RGUI)>;
         };
 
