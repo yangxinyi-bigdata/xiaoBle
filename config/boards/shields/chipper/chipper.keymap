@@ -248,15 +248,6 @@
                 , <&to 4>
                 ;
         };
-        sticky_ctrl_d: sticky_ctrl_d {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LCTRL>
-                , <&macro_tap &kp D>
-                , <&macro_release &kp LCTRL>
-                ;
-        };
     };
 };
 
@@ -265,10 +256,10 @@
 
 / {
     behaviors {
-        sticky_ctrl_d_key: sticky_ctrl_d_key {
+        sticky_button: sticky_button {
             compatible = "zmk,behavior-sticky-key";
             #binding-cells = <0>;
-            bindings = <&sticky_ctrl_d>;
+            bindings = <&kp>;
             release-after-ms = <60000>;
             quick-release;
             ignore-modifiers;
@@ -450,7 +441,7 @@
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤           ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
   &mt LALT TAB &kp Z        &kp X         &kp C         &V_RBKT         &kp B                  &kp N         &kp M      &kp COMMA      &kp DOT      &kp SLASH    &mt RALT SEMICOLON
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤           ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
-                                    &sticky_ctrl_d_key   &kp LGUI       &kp SPC               &kp ENTER   &layer_hold NAV BACKSPACE  &mk_tap RCTRL ESC
+                                    &sticky_button LCTRL  &kp LGUI       &kp SPC               &kp ENTER   &layer_hold NAV BACKSPACE  &mk_tap RCTRL ESC
 //                                     ╰────────────┼──────────────┴─────────────╯           ╰─────────────┴─────────────┼─────────────╯
                         >;
                 };
