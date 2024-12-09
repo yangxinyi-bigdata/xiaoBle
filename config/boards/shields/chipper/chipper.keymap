@@ -252,12 +252,10 @@
         sticky_ctrl: sticky_ctrl {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <0>;
-            tap-ms = <0>;
             bindings
-                = <&macro_press &kp LCTRL>
-                , <&macro_wait_time 2000>    // 等待2秒
-                , <&macro_release &kp LCTRL>
+                = <&macro_press &kp A>
+                , <&macro_wait_time 10000>
+                , <&macro_release &kp A>
                 ;
         };
         
@@ -453,7 +451,7 @@
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤           ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
   &mt LALT TAB &kp Z        &kp X         &kp C         &V_RBKT         &kp B                  &kp N         &kp M      &kp COMMA      &kp DOT      &kp SLASH    &mt RALT SEMICOLON
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤           ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
-                                    &sticky_ctrl &kp LGUI       &kp SPC               &kp ENTER   &layer_hold NAV BACKSPACE  &mk_tap RCTRL ESC
+                                      &sticky_ctrl     &kp LGUI       &kp SPC                    &kp ENTER   &layer_hold NAV BACKSPACE  &mk_tap RCTRL ESC
 //                                     ╰────────────┼──────────────┴─────────────╯           ╰─────────────┴─────────────┼─────────────╯
                         >;
                 };
