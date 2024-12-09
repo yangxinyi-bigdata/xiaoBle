@@ -260,13 +260,7 @@
                 , <&macro_release &kp LCTRL>
                 ;
         };
-        // 另一种方案：通过tap-dance实现可取消的粘滞控制
-        sticky_ctrl_dance: sticky_ctrl_dance {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <2000>;        // 在2秒内再次点击会触发第二个动作
-            bindings = <&sticky_ctrl>, <&kp LCTRL>;  // 第一次点击触发粘滞，第二次点击取消
-        };
+        
     };
 };
 
@@ -275,6 +269,14 @@
 
 / {
     behaviors {
+        // 另一种方案：通过tap-dance实现可取消的粘滞控制
+        sticky_ctrl_dance: sticky_ctrl_dance {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <2000>;        // 在2秒内再次点击会触发第二个动作
+            bindings = <&sticky_ctrl>, <&kp LCTRL>;  // 第一次点击触发粘滞，第二次点击取消
+        };
+        
         notion_h1: notion_h1 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
