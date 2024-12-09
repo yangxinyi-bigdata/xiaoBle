@@ -249,13 +249,13 @@
                 ;
         };
 
-        sticky_ctrl: sticky_ctrl {
+        sticky_ctrl_d: sticky_ctrl_d {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings
-                = <&macro_press &kp A>
-                , <&macro_wait_time 10000>
-                , <&macro_release &kp A>
+                = <&macro_press &kp LCTRL>
+                , <&macro_tap &kp D>
+                , <&macro_release &kp LCTRL>
                 ;
         };
         
@@ -436,10 +436,10 @@
 
         sticky_key: sticky_key {
             compatible = "zmk,behavior-sticky-key";
-            #binding-cells = <1>;
-            bindings = <&kp>;
+            #binding-cells = <0>;
+            bindings = <&sticky_ctrl_d>;
             release-after-ms = <2000>;
-            quick-release;
+            // quick-release;
             ignore-modifiers;
         };
 
