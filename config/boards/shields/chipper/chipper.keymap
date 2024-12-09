@@ -248,6 +248,25 @@
                 , <&to 4>
                 ;
         };
+
+        sticky_ctrl: sticky_ctrl {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_wait_time 2000>    // 等待2秒
+                , <&macro_release &kp LCTRL>
+                ;
+        };
+        // 另一种方案：通过tap-dance实现可取消的粘滞控制
+        sticky_ctrl_dance: sticky_ctrl_dance {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <2000>;        // 在2秒内再次点击会触发第二个动作
+            bindings = <&sticky_ctrl>, <&kp LCTRL>;  // 第一次点击触发粘滞，第二次点击取消
+        };
     };
 };
 
@@ -256,15 +275,6 @@
 
 / {
     behaviors {
-        sticky_button: sticky_button {
-            compatible = "zmk,behavior-sticky-key";
-            #binding-cells = <0>;
-            bindings = <&kp>;
-            release-after-ms = <60000>;
-            quick-release;
-            ignore-modifiers;
-        };
-
         notion_h1: notion_h1 {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -441,7 +451,7 @@
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤           ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
   &mt LALT TAB &kp Z        &kp X         &kp C         &V_RBKT         &kp B                  &kp N         &kp M      &kp COMMA      &kp DOT      &kp SLASH    &mt RALT SEMICOLON
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤           ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
-                                    &sticky_button LCTRL  &kp LGUI       &kp SPC               &kp ENTER   &layer_hold NAV BACKSPACE  &mk_tap RCTRL ESC
+                                    &sticky_ctrl_dance &kp LGUI       &kp SPC               &kp ENTER   &layer_hold NAV BACKSPACE  &mk_tap RCTRL ESC
 //                                     ╰────────────┼──────────────┴─────────────╯           ╰─────────────┴─────────────┼─────────────╯
                         >;
                 };
