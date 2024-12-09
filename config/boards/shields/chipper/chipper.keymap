@@ -267,13 +267,6 @@
 
 / {
     behaviors {
-        // 另一种方案：通过tap-dance实现可取消的粘滞控制
-        sticky_ctrl_dance: sticky_ctrl_dance {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <2000>;        // 在2秒内再次点击会触发第二个动作
-            bindings = <&sticky_ctrl>, <&kp LCTRL>;  // 第一次点击触发粘滞，第二次点击取消
-        };
 
         notion_h1: notion_h1 {
             compatible = "zmk,behavior-mod-morph";
@@ -460,7 +453,7 @@
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤           ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
   &mt LALT TAB &kp Z        &kp X         &kp C         &V_RBKT         &kp B                  &kp N         &kp M      &kp COMMA      &kp DOT      &kp SLASH    &mt RALT SEMICOLON
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤           ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
-                                      &sticky_key LCTRL    &kp LGUI       &kp SPC                    &kp ENTER   &layer_hold NAV BACKSPACE  &mk_tap RCTRL ESC
+                                      &sticky_key    &kp LGUI       &kp SPC                    &kp ENTER   &layer_hold NAV BACKSPACE  &mk_tap RCTRL ESC
 //                                     ╰────────────┼──────────────┴─────────────╯           ╰─────────────┴─────────────┼─────────────╯
                         >;
                 };
