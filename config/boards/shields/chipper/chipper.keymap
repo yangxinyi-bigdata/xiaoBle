@@ -248,6 +248,20 @@
                 , <&to 4>
                 ;
         };
+        sticky_ctrl: sticky_ctrl {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings
+                = <&macro_press &kp LCTRL>
+                , <&macro_pause_for_release>
+                , <&macro_tap &key_repeat>
+                , <&macro_pause_for_release>
+                , <&macro_tap &key_repeat>
+                , <&macro_release &kp LCTRL>
+                ;
+        };
     };
 };
 
@@ -432,7 +446,7 @@
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤           ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
   &mt LALT TAB &kp Z        &kp X         &kp C         &V_RBKT         &kp B                  &kp N         &kp M      &kp COMMA      &kp DOT      &kp SLASH    &mt RALT SEMICOLON
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤           ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
-                                    &mt LCTRL TAB    &kp LGUI       &kp SPC               &kp ENTER   &layer_hold NAV BACKSPACE  &mk_tap RCTRL ESC
+                                    &sticky_ctrl   &kp LGUI       &kp SPC               &kp ENTER   &layer_hold NAV BACKSPACE  &mk_tap RCTRL ESC
 //                                     ╰────────────┼──────────────┴─────────────╯           ╰─────────────┴─────────────┼─────────────╯
                         >;
                 };
