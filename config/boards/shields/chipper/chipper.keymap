@@ -49,23 +49,10 @@
 / {
     combos {
         compatible = "zmk,combos";
-        combo_arc_last {
-            timeout-ms = <50>;
-            key-positions = <14 15 16>;
-            bindings = <&kp LG(M)>;
-        };
-
-        combo_arc_next {
-            timeout-ms = <50>;
-            key-positions = <26 27 28>;
-            bindings = <&kp LG(COMMA)>;
-        };
-
         combo_sys_layer {
             timeout-ms = <50>;
             key-positions = <0 1 2>;  // 左上角三个键的组合
-            bindings = <&mo SYS>;       // 
-            layers = <DEF WIN IOS NAV FN>; // 在这些层中启用这个组合键
+            bindings = <&kp B>;       // 
         };        
     };
 };
@@ -78,6 +65,14 @@
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            bindings = <&kp>, <&kp>;
+        };
+
+        mt_hold: mt_hold {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
             tapping-term-ms = <200>;
             bindings = <&kp>, <&kp>;
         };
@@ -105,14 +100,6 @@
             // retro-tap;  // 如果按了之后没有按其他键, 直接松开了, 则触发删除键功能
             hold-while-undecided;  // 按下后立即触发换层功能, 除非什么也不按直接松开, 否则都是按住功能
             bindings = <&mo>, <&kp>;
-        };
-
-        mt_hold: mt_hold {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <200>;
-            bindings = <&kp>, <&kp>;
         };
 
         go_up: go_up {
