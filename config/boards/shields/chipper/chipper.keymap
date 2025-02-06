@@ -76,6 +76,18 @@
             tapping-term-ms = <200>;
             bindings = <&kp>, <&kp>;
         };
+
+        lgui_hold: lgui_hold {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "hold-preferred";
+            tapping-term-ms = <300>;
+            // quick-tap-ms = <200>; // 如果在200毫秒内再次按下这个键, 则直接出发两次这个键
+            // retro-tap;  // 如果按了之后没有按其他键, 直接松开了, 则触发短按功能 
+            hold-while-undecided;  // 如果按住之后, 立刻按其他键了, 则直接触发长按功能
+            // hold-while-undecided-linger;
+            bindings = <&kp>, <&kp>;
+        };
         
     layer_tap: layer_tap {
             compatible = "zmk,behavior-hold-tap";
@@ -482,9 +494,9 @@ DEF_layer {
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤           ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
   &kp LSHIFT  &kp A         &kp S          &kp D      &F_RPAR     &G_SEMICOLON              &go_page_down   &go_left      &go_down     &go_right   &kp NUMBER_2   &N3_COLON
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤           ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-  &mt LCTL TAB &kp Z        &kp X         &kp C         &V_RBKT         &kp B                  &kp N         &kp M      &kp COMMA      &kp DOT      &kp SLASH    &kp RALT
+  &mt LCTL TAB &kp Z        &kp X         &kp C         &V_RBKT         &kp B                  &kp N         &kp M      &kp COMMA      &kp DOT      &kp SLASH    &mt_hold RGUI ESC
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤           ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
-                                          &kp LALT      &LGUI_tab      &kp SPC                  &kp ENTER   &layer_hold NAV BACKSPACE  &mk_tap RGUI ESC
+                                         &kp LALT     &lgui_hold LGUI LALT  &kp SPC             &kp ENTER   &layer_hold NAV BACKSPACE   &kp RALT
 //                                     ╰────────────┼──────────────┴─────────────╯           ╰─────────────┴─────────────┼─────────────╯
                         >;
                 };
@@ -497,9 +509,9 @@ WIN_layer {
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤         ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
    &kp LSHIFT  ___            ___           ___          ___             ___                  &win_page_down   &win_left      &win_down     &win_right         ___           ___
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤         ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-  &mt LALT TAB  ___            ___           ___          ___             ___                  ___            ___          ___              ___         ___       &kp LWIN
+  &mt LALT TAB  ___            ___           ___          ___             ___                  ___            ___          ___              ___         ___       &mk_tap RCTRL ESC
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤         ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
-                                          &kp LWIN     &LCTL_tab      ___                      ___             ___         &mk_tap RCTRL ESC
+                                          &kp LWIN     &LCTL_tab      ___                      ___             ___       &kp LWIN    
 //                                     ╰─────────────┴─────────────┴─────────────╯         ╰─────────────┴─────────────┼─────────────╯
                         >;
 		};
