@@ -538,7 +538,7 @@
             mods = <(MOD_LGUI)>;
         };
 
-        NUMBER_3_COLON: NUMBER_3_COLON {
+        NUMBER_3_SEMICOLON: NUMBER_3_SEMICOLON {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
             bindings = <&kp NUMBER_3>, <&kp SEMICOLON>;
@@ -602,7 +602,7 @@ IOS_layer {
 //╭──────╮ ╭─────────────┬─────────────┬────────────────────┬───────────────────────┬──────────────────╮        ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
   &kp TILDE  &kp EXCLAMATION  &kp PIPE      &kp BACKSLASH          &kp LBRC              &kp RBRC                 &kp PLUS   &kp NUMBER_7  &command_8   &kp NUMBER_9  &layer_tap FN ASTERISK  ___
 //├──────┤ ├─────────────┼─────────────┼────────────────────┼───────────────────────┼──────────────────┤        ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    ___     &kp SINGLE_QUOTE &kp DODOUBLE_QUOTESLLAR  &kp UNDERSCORE   &kp LBKT          &kp RPAR                 &kp MINUS    &command_4   &command_5     &command_6    &kp SINGLE_QUOTE &kp DOUBLE_QUOTES
+    ___   &kp SINGLE_QUOTE &kp DODOUBLE_QUOTESLLAR  &kp UNDERSCORE   &kp LBKT          &kp RPAR                   &kp MINUS    &command_4   &command_5     &command_6  &NUMBER_2_COLON   &NUMBER_3_SEMICOLON
 //├──────┤ ├─────────────┼─────────────┼────────────────────┼───────────────────────┼──────────────────┤        ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
   &kp LS(TAB)  &kp PLUS     &kp MINUST     &kp EQUAL            &kp LPAR                 &kp RPAR                 &kp EQUAL    &kp NUMBER_1  &kp NUMBER_2   &kp NUMBER_3      ___        ___
 //├──────┤ ╰─────────────┼─────────────┴────────────────────┼───────────────────────┼──────────────────┤        ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
