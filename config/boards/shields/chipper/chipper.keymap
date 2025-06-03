@@ -439,20 +439,6 @@
             tapping-term-ms = <400>;
             bindings = <&kp GRAVE>, <&kp TILDE>;
         };
-
-        NUMBER_2_COLON: NUMBER_2_COLON {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp NUMBER_2>, <&kp COLON>;
-            mods = <(MOD_LGUI)>;
-        };
-
-        NUMBER_3_SEMICOLON: NUMBER_3_SEMICOLON {
-            compatible = "zmk,behavior-mod-morph";
-            #binding-cells = <0>;
-            bindings = <&kp NUMBER_3>, <&kp SEMICOLON>;
-            mods = <(MOD_LGUI)>;
-        };
     };
 };
 
@@ -466,7 +452,7 @@ DEF_layer {
 //╭──────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮           ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
   &kp GRAVE   &kp Q        &kp W         &kp E         &kp R          &kp T                   &go_page_up      &kp U          &go_up      &kp O     &layer_tap FN P  &kp DELETE
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤           ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-  &kp RSHIFT  &kp A         &kp S          &kp D        &kp F         &kp G                 &go_page_down   &go_left      &go_down     &go_right   &NUMBER_2_COLON   &NUMBER_3_SEMICOLON
+  &kp RSHIFT  &kp A         &kp S          &kp D        &kp F         &kp G                 &go_page_down   &go_left      &go_down     &go_right   &kp NUMBER_2   &kp NUMBER_3
 //├──────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤           ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
   &mt LCTL TAB &kp Z        &kp X         &kp C        &kp V        &kp B                 &kp N           &kp M        &kp COMMA      &kp DOT      &kp SLASH    &mt_hold RGUI TAB
 //├──────┤ ╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤           ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
@@ -511,7 +497,7 @@ IOS_layer {
 //╭──────╮ ╭─────────────┬─────────────┬────────────────────┬───────────────────────┬──────────────────╮        ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭──────╮
   &kp TILDE  &kp EXCLAMATION  &kp PIPE      &kp BACKSLASH          &kp LBRC              &kp RBRC                  &kp PLUS   &kp NUMBER_7  &command_8   &kp NUMBER_9  &layer_tap FN ASTERISK  ___
 //├──────┤ ├─────────────┼─────────────┼────────────────────┼───────────────────────┼──────────────────┤        ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
-    ___   &kp SINGLE_QUOTE &kp DOUBLE_QUOTES  &kp UNDERSCORE       &kp LBKT              &kp RBKT                  &kp MINUS    &command_4   &command_5     &command_6  &NUMBER_2_COLON   &NUMBER_3_SEMICOLON
+    ___   &kp SINGLE_QUOTE &kp DOUBLE_QUOTES  &kp UNDERSCORE       &kp LBKT              &kp RBKT                  &kp MINUS    &command_4   &command_5     &command_6    &kp COLON     &kp SEMICOLON
 //├──────┤ ├─────────────┼─────────────┼────────────────────┼───────────────────────┼──────────────────┤        ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├──────┤
   &kp LS(TAB)  &kp PLUS     &kp MINUS     &kp EQUAL               &kp LPAR              &kp RPAR                  &kp EQUAL    &kp NUMBER_1  &kp NUMBER_2   &kp NUMBER_3      ___        ___
 //├──────┤ ╰─────────────┼─────────────┴────────────────────┼───────────────────────┼──────────────────┤        ├─────────────┼─────────────┼─────────────┴───────────────────────────╯ ├──────┤
